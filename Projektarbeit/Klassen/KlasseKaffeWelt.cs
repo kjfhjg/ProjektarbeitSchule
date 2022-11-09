@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Resources;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +25,16 @@ namespace Projektarbeit
         public KlasseKaffeWelt()
         {
             m_verkaufsgüter = new Verkaufsgut[4];
+            
+                m_verkaufsgüter[0].m_name = File.ReadLines(Properties.Resources.KaffeeArten).Take(1).First();
+                m_verkaufsgüter[0].m_anzahl = 0;
+                m_verkaufsgüter[0].m_tassenGröße = 0;
+                m_verkaufsgüter[0].m_kosten = Convert.ToInt32(File.ReadLines(Properties.Resources.KaffeeArten).Skip(1).Take(1).First());
+                m_verkaufsgüter[0].m_count = Convert.ToDecimal(File.ReadLines(Properties.Resources.KaffeeArten).Skip(2).Take(1).First());
+                m_verkaufsgüter[0].m_upgrade = false;
 
-            m_verkaufsgüter[0].m_name = "Milchkaffe";
-            m_verkaufsgüter[0].m_anzahl = 0;
-            m_verkaufsgüter[0].m_tassenGröße = 0;
-            m_verkaufsgüter[0].m_kosten = 10;
-            m_verkaufsgüter[0].m_count = (decimal)0.1;
-            m_verkaufsgüter[0].m_upgrade = false;
+            Console.WriteLine(m_verkaufsgüter[0].m_kosten);
+            
         }
         public void Kaufen(ref double p_gesamtPunkte)
         {

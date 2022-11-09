@@ -19,7 +19,7 @@ namespace Projektarbeit.Properties {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -67,6 +67,29 @@ namespace Projektarbeit.Properties {
             get {
                 object obj = ResourceManager.GetObject("D9DAAAEB_9E0C_433E_A4AD_3DFED8A0B0AC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Milchkaffe
+        ///10
+        ///0,1
+        ///
+        ///Capuchino
+        ///100
+        ///1
+        ///
+        ///Latte
+        ///1000
+        ///5
+        ///
+        ///Espresso
+        ///10000
+        ///10 ähnelt.
+        /// </summary>
+        internal static string KaffeeArten {
+            get {
+                return ResourceManager.GetString("KaffeeArten", resourceCulture);
             }
         }
         

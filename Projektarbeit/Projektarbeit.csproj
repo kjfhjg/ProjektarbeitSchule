@@ -104,5 +104,8 @@
   <ItemGroup>
     <None Include="Resources\D9DAAAEB-9E0C-433E-A4AD-3DFED8A0B0AC.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KaffeeArten.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
