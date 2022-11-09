@@ -1,0 +1,16 @@
+
+Milchkaffe
+10
+0.1</Count
+/
+Latte
+100
+1
+/
+Cappuchino
+1000
+5
+/
+Espresso
+10000
+10
