@@ -31,26 +31,39 @@ namespace Projektarbeit
             m_verkaufsgüter[0].m_count = (decimal)0.1;
             m_verkaufsgüter[0].m_upgrade = false;
         }
-        public void Kaufen(ref double p_gesamtPunkte)
+        public int Kaufen(object p_sender)
         {
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
-                if (p_gesamtPunkte >= m_verkaufsgüter[i].m_kosten)
+                if (m_verkaufsgüter[i].m_name == BekommeControleName(p_sender))
                 {
-
+                    if (Clicker.m_PunkteGesamt >= m_verkaufsgüter[i].m_kosten)
+                    {
+                        Clicker.m_PunkteGesamt -= m_verkaufsgüter[i].m_kosten;
+                        m_verkaufsgüter[i].m_anzahl += 1;
+                        m_verkaufsgüter[i].m_kosten = m_verkaufsgüter[i].m_kosten * 1.5;
+                        Clicker.m_HauptCount += m_verkaufsgüter[i].m_count;
+                        return m_verkaufsgüter[i].m_anzahl;
+                    }
+                    return 0;
                 }
+                return 0;
             }
-
+            return 0;
         }
-        public string BekommeControleName(object sender, EventArgs e)
+        public static string BekommeControleName(object sender)
         {
-            Button tmp_nameControle;
-            string tmp_name;
+            try
+            {
+                PictureBox Controle = (PictureBox)sender;
+                string ControleName = Controle.Name;
 
-            tmp_nameControle= sender as Button;
-            tmp_name=tmp_nameControle.Name;
-
-            return tmp_name;
+                return ControleName;
+            }
+            catch
+            {
+                return "";
+            }
         }
     }
 }
