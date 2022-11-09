@@ -1,15 +1,12 @@
 Milchkaffe
-10
-0,1
-
-Capuchino
-100
-1
-
-Latte
-1000
-5
-
-Espresso
-10000
-10
+ 10
+ 0,1
+ Capuchino
+ 100
+ 1
+ Latte
+ 1000
+ 5
+ Espresso
+ 10000
+ 10

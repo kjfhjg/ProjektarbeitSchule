@@ -24,17 +24,21 @@ namespace Projektarbeit
         Verkaufsgut[] m_verkaufsgüter;
         public KlasseKaffeWelt()
         {
+            string temp;
+            int zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
-            
-                m_verkaufsgüter[0].m_name = File.ReadLines(Properties.Resources.KaffeeArten).Take(1).First();
-                m_verkaufsgüter[0].m_anzahl = 0;
-                m_verkaufsgüter[0].m_tassenGröße = 0;
-                m_verkaufsgüter[0].m_kosten = Convert.ToInt32(File.ReadLines(Properties.Resources.KaffeeArten).Skip(1).Take(1).First());
-                m_verkaufsgüter[0].m_count = Convert.ToDecimal(File.ReadLines(Properties.Resources.KaffeeArten).Skip(2).Take(1).First());
-                m_verkaufsgüter[0].m_upgrade = false;
 
-            Console.WriteLine(m_verkaufsgüter[0].m_kosten);
-            
+            temp = Properties.Resources.KaffeeArten;
+            string[] stringAufspalten = temp.Split(' ');
+            for (int i = 0; i < m_verkaufsgüter.Length; i++)
+            {
+                m_verkaufsgüter[i].m_name = stringAufspalten[zaehler++];
+                m_verkaufsgüter[i].m_anzahl = 0;
+                m_verkaufsgüter[i].m_tassenGröße = 0;
+                m_verkaufsgüter[i].m_kosten = Convert.ToInt32(stringAufspalten[zaehler++]);
+                m_verkaufsgüter[i].m_count = Convert.ToDecimal(stringAufspalten[zaehler++]);
+                m_verkaufsgüter[i].m_upgrade = false;
+            }
         }
         public int Kaufen(object p_sender)
         {
