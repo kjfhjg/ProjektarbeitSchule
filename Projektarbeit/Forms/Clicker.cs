@@ -13,8 +13,9 @@ namespace Projektarbeit
     public partial class Clicker : Form
     {
 
-        decimal m_HauptCount = (decimal)0.1;
-        double m_PunkteGesamt = 0;
+        public static decimal m_HauptCount { get; set; } = (decimal)0.1;
+        public static double m_PunkteGesamt { get; set; } = 10;
+
         decimal m_zwischenPunkte;
         KlasseKaffeWelt x = new KlasseKaffeWelt();
         public Clicker()

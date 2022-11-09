@@ -33,9 +33,9 @@
             this.lbl_TalerPerSecond = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Laden = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_HauptClicker = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_TalerGesamt
@@ -86,15 +86,15 @@
             this.btn_Laden.TabStop = false;
             this.btn_Laden.Click += new System.EventHandler(this.btn_Laden_Click);
             // 
-            // pictureBox1
+            // btn_HauptClicker
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 174);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 162);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.Hauptklicker_Click);
+            this.btn_HauptClicker.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_HauptClicker.Location = new System.Drawing.Point(48, 174);
+            this.btn_HauptClicker.Name = "btn_HauptClicker";
+            this.btn_HauptClicker.Size = new System.Drawing.Size(189, 162);
+            this.btn_HauptClicker.TabIndex = 0;
+            this.btn_HauptClicker.TabStop = false;
+            this.btn_HauptClicker.Click += new System.EventHandler(this.Hauptklicker_Click);
             // 
             // Clicker
             // 
@@ -106,11 +106,11 @@
             this.Controls.Add(this.lbl_TalerPerSecond);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_TalerGesamt);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_HauptClicker);
             this.Name = "Clicker";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +118,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_HauptClicker;
         private System.Windows.Forms.Label lbl_TalerGesamt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_TalerPerSecond;

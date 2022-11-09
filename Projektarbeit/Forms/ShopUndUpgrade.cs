@@ -12,15 +12,21 @@ namespace Projektarbeit
 {
     public partial class ShopUndUpgrade : Form
     {
+        int m_anzahl;
+        KlasseKaffeWelt m_kaffewelt;
         public ShopUndUpgrade()
         {
             InitializeComponent();
+            m_kaffewelt = new KlasseKaffeWelt();
         }
 
-        private void ShopUndUpgrade_Load(object sender, EventArgs e)
+        private void Milchkaffe_Click(object sender, EventArgs e)
         {
+            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
+            m_anzahl= m_kaffewelt.Kaufen(sender);
 
-            
+            if (m_anzahl > 0)
+            lbl_anzahlMilchkaffee.Text = m_anzahl.ToString();
         }
     }
 }
