@@ -42,5 +42,11 @@ namespace Projektarbeit
             AusgabePunkte();
         }
         #endregion
+
+        private void btn_Laden_Click(object sender, EventArgs e)
+        {
+            ShopUndUpgrade Kaufladen = new ShopUndUpgrade();
+            Kaufladen.ShowDialog();
+        }
     }
 }

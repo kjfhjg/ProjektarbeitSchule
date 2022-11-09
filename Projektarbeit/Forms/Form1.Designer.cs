@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_TalerGesamt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_TalerPerSecond = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_Laden = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 174);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 162);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.Hauptklicker_Click);
             // 
             // lbl_TalerGesamt
             // 
@@ -84,21 +74,34 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Taler";
             // 
-            // pictureBox2
+            // btn_Laden
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Location = new System.Drawing.Point(244, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 33);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.btn_Laden.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_Laden.BackgroundImage = global::Projektarbeit.Properties.Resources.shop;
+            this.btn_Laden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Laden.Location = new System.Drawing.Point(244, 12);
+            this.btn_Laden.Name = "btn_Laden";
+            this.btn_Laden.Size = new System.Drawing.Size(38, 30);
+            this.btn_Laden.TabIndex = 6;
+            this.btn_Laden.TabStop = false;
+            this.btn_Laden.Click += new System.EventHandler(this.btn_Laden_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 162);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.Hauptklicker_Click);
             // 
             // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 391);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btn_Laden);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_TalerPerSecond);
             this.Controls.Add(this.label1);
@@ -106,8 +109,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Clicker";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +123,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_TalerPerSecond;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btn_Laden;
     }
 }
 

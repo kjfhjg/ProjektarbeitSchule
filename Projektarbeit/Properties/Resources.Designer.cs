@@ -63,6 +63,26 @@ namespace Projektarbeit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap D9DAAAEB_9E0C_433E_A4AD_3DFED8A0B0AC {
+            get {
+                object obj = ResourceManager.GetObject("D9DAAAEB_9E0C_433E_A4AD_3DFED8A0B0AC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shop {
+            get {
+                object obj = ResourceManager.GetObject("shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unknown {
             get {
                 object obj = ResourceManager.GetObject("unknown", resourceCulture);
@@ -76,6 +96,16 @@ namespace Projektarbeit.Properties {
         internal static System.Drawing.Bitmap unknown2 {
             get {
                 object obj = ResourceManager.GetObject("unknown2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unknown3 {
+            get {
+                object obj = ResourceManager.GetObject("unknown3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
