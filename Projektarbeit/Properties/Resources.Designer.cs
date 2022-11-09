@@ -19,7 +19,7 @@ namespace Projektarbeit.Properties {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,36 +61,22 @@ namespace Projektarbeit.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 
-        ///Milchkaffe
-        ///10
-        ///0.1&lt;/Count
-        ////
-        ///Latte
-        ///100
-        ///1
-        ////
-        ///Cappuchino
-        ///1000
-        ///5
-        ////
-        ///Espresso
-        ///10000
-        ///10
-        /// ähnelt.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static string KaffeeWelt {
+        internal static System.Drawing.Bitmap unknown {
             get {
-                return ResourceManager.GetString("KaffeeWelt", resourceCulture);
+                object obj = ResourceManager.GetObject("unknown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static string Milchkaffename {
+        internal static System.Drawing.Bitmap unknown2 {
             get {
-                return ResourceManager.GetString("Milchkaffename", resourceCulture);
+                object obj = ResourceManager.GetObject("unknown2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

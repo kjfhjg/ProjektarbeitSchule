@@ -23,13 +23,11 @@ namespace Projektarbeit
         {
             m_verkaufsgüter = new Verkaufsgut[4];
 
-            string x = Properties.Resources.KaffeeWelt;
             m_verkaufsgüter[0].m_anzahl = 0;
             m_verkaufsgüter[0].m_tassenGröße = 0;
             m_verkaufsgüter[0].m_kosten = 10;
             m_verkaufsgüter[0].m_name = "Milchkaffe";
             m_verkaufsgüter[0].m_name = "Milchkaffe";
-
         }
     }
 }

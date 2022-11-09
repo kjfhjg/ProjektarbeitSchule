@@ -41,10 +41,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Tasse)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,7 +61,9 @@
             // 
             // btn_Tasse
             // 
-            this.btn_Tasse.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Tasse.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Tasse.BackgroundImage = global::Projektarbeit.Properties.Resources.unknown;
+            this.btn_Tasse.ErrorImage = null;
             this.btn_Tasse.Location = new System.Drawing.Point(223, 59);
             this.btn_Tasse.Name = "btn_Tasse";
             this.btn_Tasse.Size = new System.Drawing.Size(131, 50);
@@ -181,6 +183,16 @@
             this.panel4.Size = new System.Drawing.Size(371, 154);
             this.panel4.TabIndex = 10;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(270, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "0 Taler";
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -207,16 +219,6 @@
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(270, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0 Taler";
             // 
             // ShopUndUpgrade
             // 

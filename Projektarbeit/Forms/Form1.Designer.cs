@@ -1,6 +1,6 @@
 ﻿namespace Projektarbeit
 {
-    partial class Form1
+    partial class Clicker
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -29,30 +29,33 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_TalerGesamt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_TalerPerSecond = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 167);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 174);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 162);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.Hauptklicker_Click);
             // 
-            // label2
+            // lbl_TalerGesamt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "0 Kaffees";
+            this.lbl_TalerGesamt.AutoSize = true;
+            this.lbl_TalerGesamt.Location = new System.Drawing.Point(130, 66);
+            this.lbl_TalerGesamt.Name = "lbl_TalerGesamt";
+            this.lbl_TalerGesamt.Size = new System.Drawing.Size(13, 13);
+            this.lbl_TalerGesamt.TabIndex = 2;
+            this.lbl_TalerGesamt.Text = "0";
             // 
             // label1
             // 
@@ -63,27 +66,48 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Kaffee Pro Sekunde";
             // 
-            // label3
+            // lbl_TalerPerSecond
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(130, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "0";
+            this.lbl_TalerPerSecond.AutoSize = true;
+            this.lbl_TalerPerSecond.Location = new System.Drawing.Point(130, 112);
+            this.lbl_TalerPerSecond.Name = "lbl_TalerPerSecond";
+            this.lbl_TalerPerSecond.Size = new System.Drawing.Size(13, 13);
+            this.lbl_TalerPerSecond.TabIndex = 4;
+            this.lbl_TalerPerSecond.Text = "0";
             // 
-            // Form1
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(121, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Taler";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox2.Location = new System.Drawing.Point(244, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 33);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 391);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_TalerPerSecond);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_TalerGesamt);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Clicker";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,9 +116,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_TalerGesamt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_TalerPerSecond;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
