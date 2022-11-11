@@ -62,7 +62,7 @@
             // lbl_anzahlMilchkaffee
             // 
             this.lbl_anzahlMilchkaffee.AutoSize = true;
-            this.lbl_anzahlMilchkaffee.Location = new System.Drawing.Point(288, 22);
+            this.lbl_anzahlMilchkaffee.Location = new System.Drawing.Point(240, 22);
             this.lbl_anzahlMilchkaffee.Name = "lbl_anzahlMilchkaffee";
             this.lbl_anzahlMilchkaffee.Size = new System.Drawing.Size(13, 13);
             this.lbl_anzahlMilchkaffee.TabIndex = 5;
@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.lbl_anzahlMilchkaffee);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(371, 154);
+            this.panel1.Size = new System.Drawing.Size(320, 154);
             this.panel1.TabIndex = 7;
             // 
             // pictureBox3
@@ -93,7 +93,7 @@
             this.Milchkaffe.BackgroundImage = global::Projektarbeit.Properties.Resources.unknown;
             this.Milchkaffe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Milchkaffe.ErrorImage = null;
-            this.Milchkaffe.Location = new System.Drawing.Point(223, 59);
+            this.Milchkaffe.Location = new System.Drawing.Point(175, 59);
             this.Milchkaffe.Name = "Milchkaffe";
             this.Milchkaffe.Size = new System.Drawing.Size(131, 50);
             this.Milchkaffe.TabIndex = 0;
@@ -105,9 +105,9 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Cappuccino);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(417, 12);
+            this.panel2.Location = new System.Drawing.Point(347, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 154);
+            this.panel2.Size = new System.Drawing.Size(320, 154);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox1
@@ -124,7 +124,7 @@
             this.Cappuccino.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Cappuccino.BackgroundImage = global::Projektarbeit.Properties.Resources.unknown2;
             this.Cappuccino.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Cappuccino.Location = new System.Drawing.Point(223, 59);
+            this.Cappuccino.Location = new System.Drawing.Point(175, 59);
             this.Cappuccino.Name = "Cappuccino";
             this.Cappuccino.Size = new System.Drawing.Size(131, 50);
             this.Cappuccino.TabIndex = 0;
@@ -133,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(288, 22);
+            this.label1.Location = new System.Drawing.Point(235, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 5;
@@ -146,7 +146,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(12, 172);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(371, 154);
+            this.panel3.Size = new System.Drawing.Size(320, 154);
             this.panel3.TabIndex = 9;
             // 
             // pictureBox4
@@ -163,7 +163,7 @@
             this.Latte.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Latte.BackgroundImage = global::Projektarbeit.Properties.Resources.unknown3;
             this.Latte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Latte.Location = new System.Drawing.Point(223, 59);
+            this.Latte.Location = new System.Drawing.Point(175, 59);
             this.Latte.Name = "Latte";
             this.Latte.Size = new System.Drawing.Size(131, 50);
             this.Latte.TabIndex = 0;
@@ -172,7 +172,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(288, 22);
+            this.label2.Location = new System.Drawing.Point(240, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 5;
@@ -184,16 +184,16 @@
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.Espresso);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(417, 172);
+            this.panel4.Location = new System.Drawing.Point(347, 172);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(371, 154);
+            this.panel4.Size = new System.Drawing.Size(320, 154);
             this.panel4.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(270, 112);
+            this.label4.Location = new System.Drawing.Point(222, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 6;
@@ -213,7 +213,7 @@
             this.Espresso.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Espresso.BackgroundImage = global::Projektarbeit.Properties.Resources.D9DAAAEB_9E0C_433E_A4AD_3DFED8A0B0AC;
             this.Espresso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Espresso.Location = new System.Drawing.Point(223, 59);
+            this.Espresso.Location = new System.Drawing.Point(175, 59);
             this.Espresso.Name = "Espresso";
             this.Espresso.Size = new System.Drawing.Size(131, 50);
             this.Espresso.TabIndex = 0;
@@ -222,7 +222,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 22);
+            this.label3.Location = new System.Drawing.Point(240, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 5;
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 349);
+            this.ClientSize = new System.Drawing.Size(687, 341);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
