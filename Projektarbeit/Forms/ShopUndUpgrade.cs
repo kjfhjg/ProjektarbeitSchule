@@ -12,48 +12,35 @@ namespace Projektarbeit
 {
     public partial class ShopUndUpgrade : Form
     {
-        int m_anzahl;
+        public event delRefresh m_refresh;
         KlasseKaffeWelt m_kaffewelt;
         public ShopUndUpgrade()
         {
             InitializeComponent();
             m_kaffewelt = new KlasseKaffeWelt();
         }
-
-        private void Milchkaffe_Click(object sender, EventArgs e)
+        public void Refresh()
         {
-            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
-            m_anzahl= m_kaffewelt.Kaufen(sender);
-
-            if (m_anzahl > 0)
-            lbl_anzahlMilchkaffee.Text = m_anzahl.ToString();
+            if (m_refresh != null)
+            {
+                m_refresh();
+            }
         }
 
-        private void Cappuccino_Click(object sender, EventArgs e)
+        private void Click(object sender, EventArgs e)
         {
-            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
-            m_anzahl = m_kaffewelt.Kaufen(sender);
+            int tmp_anzahl;
+            string x;
 
-            if (m_anzahl > 0)
-                lbl_Cappu.Text = m_anzahl.ToString();
-        }
+            tmp_anzahl = m_kaffewelt.Kaufen(sender);
 
-        private void Latte_Click(object sender, EventArgs e)
-        {
-            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
-            m_anzahl = m_kaffewelt.Kaufen(sender);
-
-            if (m_anzahl > 0)
-                lbl_latte.Text = m_anzahl.ToString();
-        }
-
-        private void Espresso_Click(object sender, EventArgs e)
-        {
-            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
-            m_anzahl = m_kaffewelt.Kaufen(sender);
-
-            if (m_anzahl > 0)
-                lbl_espresso.Text = m_anzahl.ToString();
+            if (tmp_anzahl != 0)
+            {
+                x = KlasseKaffeWelt.BekommeControleName(sender);
+                x = "lbl_" + x;
+                ((Label)this.Controls.Find(x, true)[0]).Text = tmp_anzahl.ToString();
+            }
+            Refresh();
         }
     }
 }

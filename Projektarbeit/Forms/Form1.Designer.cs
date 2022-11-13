@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_TalerGesamt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_TalerPerSecond = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Laden = new System.Windows.Forms.PictureBox();
             this.btn_HauptClicker = new System.Windows.Forms.PictureBox();
+            this.lbl_TalerGesamt = new System.Windows.Forms.TextBox();
+            this.lbl_TalerPerSecond = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_TalerGesamt
-            // 
-            this.lbl_TalerGesamt.AutoSize = true;
-            this.lbl_TalerGesamt.Location = new System.Drawing.Point(130, 66);
-            this.lbl_TalerGesamt.Name = "lbl_TalerGesamt";
-            this.lbl_TalerGesamt.Size = new System.Drawing.Size(13, 13);
-            this.lbl_TalerGesamt.TabIndex = 2;
-            this.lbl_TalerGesamt.Text = "0";
             // 
             // label1
             // 
@@ -56,19 +47,10 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Kaffee Pro Sekunde";
             // 
-            // lbl_TalerPerSecond
-            // 
-            this.lbl_TalerPerSecond.AutoSize = true;
-            this.lbl_TalerPerSecond.Location = new System.Drawing.Point(130, 112);
-            this.lbl_TalerPerSecond.Name = "lbl_TalerPerSecond";
-            this.lbl_TalerPerSecond.Size = new System.Drawing.Size(13, 13);
-            this.lbl_TalerPerSecond.TabIndex = 4;
-            this.lbl_TalerPerSecond.Text = "0";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(121, 44);
+            this.label2.Location = new System.Drawing.Point(125, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 5;
@@ -96,16 +78,40 @@
             this.btn_HauptClicker.TabStop = false;
             this.btn_HauptClicker.Click += new System.EventHandler(this.Hauptklicker_Click);
             // 
+            // lbl_TalerGesamt
+            // 
+            this.lbl_TalerGesamt.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_TalerGesamt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_TalerGesamt.Enabled = false;
+            this.lbl_TalerGesamt.Location = new System.Drawing.Point(91, 67);
+            this.lbl_TalerGesamt.Name = "lbl_TalerGesamt";
+            this.lbl_TalerGesamt.Size = new System.Drawing.Size(100, 13);
+            this.lbl_TalerGesamt.TabIndex = 7;
+            this.lbl_TalerGesamt.Text = "0";
+            this.lbl_TalerGesamt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbl_TalerPerSecond
+            // 
+            this.lbl_TalerPerSecond.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_TalerPerSecond.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_TalerPerSecond.Enabled = false;
+            this.lbl_TalerPerSecond.Location = new System.Drawing.Point(91, 106);
+            this.lbl_TalerPerSecond.Name = "lbl_TalerPerSecond";
+            this.lbl_TalerPerSecond.Size = new System.Drawing.Size(100, 13);
+            this.lbl_TalerPerSecond.TabIndex = 8;
+            this.lbl_TalerPerSecond.Text = "0";
+            this.lbl_TalerPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 391);
+            this.Controls.Add(this.lbl_TalerPerSecond);
+            this.Controls.Add(this.lbl_TalerGesamt);
             this.Controls.Add(this.btn_Laden);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbl_TalerPerSecond);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_TalerGesamt);
             this.Controls.Add(this.btn_HauptClicker);
             this.Name = "Clicker";
             this.Text = "Form1";
@@ -119,11 +125,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox btn_HauptClicker;
-        private System.Windows.Forms.Label lbl_TalerGesamt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_TalerPerSecond;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btn_Laden;
+        private System.Windows.Forms.TextBox lbl_TalerGesamt;
+        private System.Windows.Forms.TextBox lbl_TalerPerSecond;
     }
 }
 

@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_anzahlMilchkaffee = new System.Windows.Forms.Label();
+            this.lbl_Milchkaffe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Milchkaffe = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cappuccino = new System.Windows.Forms.PictureBox();
-            this.lbl_Cappu = new System.Windows.Forms.Label();
+            this.lbl_Cappuccino = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Latte = new System.Windows.Forms.PictureBox();
-            this.lbl_latte = new System.Windows.Forms.Label();
+            this.lbl_Latte = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Espresso = new System.Windows.Forms.PictureBox();
-            this.lbl_espresso = new System.Windows.Forms.Label();
+            this.lbl_Espresso = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Milchkaffe)).BeginInit();
@@ -59,20 +59,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.Espresso)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_anzahlMilchkaffee
+            // lbl_Milchkaffe
             // 
-            this.lbl_anzahlMilchkaffee.AutoSize = true;
-            this.lbl_anzahlMilchkaffee.Location = new System.Drawing.Point(240, 22);
-            this.lbl_anzahlMilchkaffee.Name = "lbl_anzahlMilchkaffee";
-            this.lbl_anzahlMilchkaffee.Size = new System.Drawing.Size(13, 13);
-            this.lbl_anzahlMilchkaffee.TabIndex = 5;
-            this.lbl_anzahlMilchkaffee.Text = "0";
+            this.lbl_Milchkaffe.AccessibleName = "";
+            this.lbl_Milchkaffe.AutoSize = true;
+            this.lbl_Milchkaffe.Location = new System.Drawing.Point(240, 22);
+            this.lbl_Milchkaffe.Name = "lbl_Milchkaffe";
+            this.lbl_Milchkaffe.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Milchkaffe.TabIndex = 5;
+            this.lbl_Milchkaffe.Text = "0";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.Milchkaffe);
-            this.panel1.Controls.Add(this.lbl_anzahlMilchkaffee);
+            this.panel1.Controls.Add(this.lbl_Milchkaffe);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 154);
@@ -98,13 +99,13 @@
             this.Milchkaffe.Size = new System.Drawing.Size(131, 50);
             this.Milchkaffe.TabIndex = 0;
             this.Milchkaffe.TabStop = false;
-            this.Milchkaffe.Click += new System.EventHandler(this.Milchkaffe_Click);
+            this.Milchkaffe.Click += new System.EventHandler(this.Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Cappuccino);
-            this.panel2.Controls.Add(this.lbl_Cappu);
+            this.panel2.Controls.Add(this.lbl_Cappuccino);
             this.panel2.Location = new System.Drawing.Point(347, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 154);
@@ -129,22 +130,23 @@
             this.Cappuccino.Size = new System.Drawing.Size(131, 50);
             this.Cappuccino.TabIndex = 0;
             this.Cappuccino.TabStop = false;
-            this.Cappuccino.Click += new System.EventHandler(this.Cappuccino_Click);
+            this.Cappuccino.Click += new System.EventHandler(this.Click);
             // 
-            // lbl_Cappu
+            // lbl_Cappuccino
             // 
-            this.lbl_Cappu.AutoSize = true;
-            this.lbl_Cappu.Location = new System.Drawing.Point(235, 22);
-            this.lbl_Cappu.Name = "lbl_Cappu";
-            this.lbl_Cappu.Size = new System.Drawing.Size(13, 13);
-            this.lbl_Cappu.TabIndex = 5;
-            this.lbl_Cappu.Text = "0";
+            this.lbl_Cappuccino.AccessibleName = "";
+            this.lbl_Cappuccino.AutoSize = true;
+            this.lbl_Cappuccino.Location = new System.Drawing.Point(235, 22);
+            this.lbl_Cappuccino.Name = "lbl_Cappuccino";
+            this.lbl_Cappuccino.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Cappuccino.TabIndex = 5;
+            this.lbl_Cappuccino.Text = "0";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.Latte);
-            this.panel3.Controls.Add(this.lbl_latte);
+            this.panel3.Controls.Add(this.lbl_Latte);
             this.panel3.Location = new System.Drawing.Point(12, 172);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 154);
@@ -169,23 +171,24 @@
             this.Latte.Size = new System.Drawing.Size(131, 50);
             this.Latte.TabIndex = 0;
             this.Latte.TabStop = false;
-            this.Latte.Click += new System.EventHandler(this.Latte_Click);
+            this.Latte.Click += new System.EventHandler(this.Click);
             // 
-            // lbl_latte
+            // lbl_Latte
             // 
-            this.lbl_latte.AutoSize = true;
-            this.lbl_latte.Location = new System.Drawing.Point(240, 22);
-            this.lbl_latte.Name = "lbl_latte";
-            this.lbl_latte.Size = new System.Drawing.Size(13, 13);
-            this.lbl_latte.TabIndex = 5;
-            this.lbl_latte.Text = "0";
+            this.lbl_Latte.AccessibleName = "";
+            this.lbl_Latte.AutoSize = true;
+            this.lbl_Latte.Location = new System.Drawing.Point(240, 22);
+            this.lbl_Latte.Name = "lbl_Latte";
+            this.lbl_Latte.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Latte.TabIndex = 5;
+            this.lbl_Latte.Text = "0";
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.Espresso);
-            this.panel4.Controls.Add(this.lbl_espresso);
+            this.panel4.Controls.Add(this.lbl_Espresso);
             this.panel4.Location = new System.Drawing.Point(347, 172);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(320, 154);
@@ -220,16 +223,17 @@
             this.Espresso.Size = new System.Drawing.Size(131, 50);
             this.Espresso.TabIndex = 0;
             this.Espresso.TabStop = false;
-            this.Espresso.Click += new System.EventHandler(this.Espresso_Click);
+            this.Espresso.Click += new System.EventHandler(this.Click);
             // 
-            // lbl_espresso
+            // lbl_Espresso
             // 
-            this.lbl_espresso.AutoSize = true;
-            this.lbl_espresso.Location = new System.Drawing.Point(240, 22);
-            this.lbl_espresso.Name = "lbl_espresso";
-            this.lbl_espresso.Size = new System.Drawing.Size(13, 13);
-            this.lbl_espresso.TabIndex = 5;
-            this.lbl_espresso.Text = "0";
+            this.lbl_Espresso.AccessibleName = "";
+            this.lbl_Espresso.AutoSize = true;
+            this.lbl_Espresso.Location = new System.Drawing.Point(240, 22);
+            this.lbl_Espresso.Name = "lbl_Espresso";
+            this.lbl_Espresso.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Espresso.TabIndex = 5;
+            this.lbl_Espresso.Text = "0";
             // 
             // ShopUndUpgrade
             // 
@@ -264,21 +268,21 @@
         #endregion
 
         private System.Windows.Forms.PictureBox Milchkaffe;
-        private System.Windows.Forms.Label lbl_anzahlMilchkaffee;
+        private System.Windows.Forms.Label lbl_Milchkaffe;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Cappuccino;
-        private System.Windows.Forms.Label lbl_Cappu;
+        private System.Windows.Forms.Label lbl_Cappuccino;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox Latte;
-        private System.Windows.Forms.Label lbl_latte;
+        private System.Windows.Forms.Label lbl_Latte;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox Espresso;
-        private System.Windows.Forms.Label lbl_espresso;
+        private System.Windows.Forms.Label lbl_Espresso;
     }
 }

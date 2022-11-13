@@ -24,6 +24,10 @@ namespace Projektarbeit
         Verkaufsgut[] m_verkaufsgüter;
         public KlasseKaffeWelt()
         {
+            NeuesSpiel();
+        }
+        public void NeuesSpiel()
+        {
             string temp;
             int zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
@@ -54,9 +58,7 @@ namespace Projektarbeit
                         Clicker.m_HauptCount += m_verkaufsgüter[i].m_count;
                         return m_verkaufsgüter[i].m_anzahl;
                     }
-                    return 0;
                 }
-                return 0;
             }
             return 0;
         }

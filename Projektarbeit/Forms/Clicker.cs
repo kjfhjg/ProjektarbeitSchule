@@ -10,17 +10,22 @@ using System.Windows.Forms;
 
 namespace Projektarbeit
 {
+    public delegate void delRefresh();
     public partial class Clicker : Form
     {
 
         public static decimal m_HauptCount { get; set; } = (decimal)0.1;
-        public static double m_PunkteGesamt { get; set; } = 10;
+        public static double m_PunkteGesamt { get; set; } = 100000000;
 
         decimal m_zwischenPunkte;
-        KlasseKaffeWelt x = new KlasseKaffeWelt();
+        ShopUndUpgrade Kaufladen;
+
         public Clicker()
         {
             InitializeComponent();
+            AusgabePunkte();
+            Kaufladen = new ShopUndUpgrade();
+            Kaufladen.m_refresh += AusgabePunkte;
         }
         public void Runden()
         {
@@ -32,7 +37,7 @@ namespace Projektarbeit
         }
         public void AusgabePunkte()
         {
-            lbl_TalerGesamt.Text = m_PunkteGesamt.ToString();
+            lbl_TalerGesamt.Text = $"{m_PunkteGesamt:0}";
             lbl_TalerPerSecond.Text = m_HauptCount.ToString();
         }
         #region ClickEvents
@@ -46,7 +51,6 @@ namespace Projektarbeit
 
         private void btn_Laden_Click(object sender, EventArgs e)
         {
-            ShopUndUpgrade Kaufladen = new ShopUndUpgrade();
             Kaufladen.ShowDialog();
         }
     }
