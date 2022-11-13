@@ -28,5 +28,32 @@ namespace Projektarbeit
             if (m_anzahl > 0)
             lbl_anzahlMilchkaffee.Text = m_anzahl.ToString();
         }
+
+        private void Cappuccino_Click(object sender, EventArgs e)
+        {
+            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
+            m_anzahl = m_kaffewelt.Kaufen(sender);
+
+            if (m_anzahl > 0)
+                lbl_Cappu.Text = m_anzahl.ToString();
+        }
+
+        private void Latte_Click(object sender, EventArgs e)
+        {
+            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
+            m_anzahl = m_kaffewelt.Kaufen(sender);
+
+            if (m_anzahl > 0)
+                lbl_latte.Text = m_anzahl.ToString();
+        }
+
+        private void Espresso_Click(object sender, EventArgs e)
+        {
+            KlasseKaffeWelt m_kaffewelt = new KlasseKaffeWelt();
+            m_anzahl = m_kaffewelt.Kaufen(sender);
+
+            if (m_anzahl > 0)
+                lbl_espresso.Text = m_anzahl.ToString();
+        }
     }
 }

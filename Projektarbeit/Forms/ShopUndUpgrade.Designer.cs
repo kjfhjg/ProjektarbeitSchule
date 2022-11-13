@@ -35,16 +35,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cappuccino = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Cappu = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Latte = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_latte = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Espresso = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_espresso = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Milchkaffe)).BeginInit();
@@ -104,7 +104,7 @@
             // 
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Cappuccino);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbl_Cappu);
             this.panel2.Location = new System.Drawing.Point(347, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 154);
@@ -129,21 +129,22 @@
             this.Cappuccino.Size = new System.Drawing.Size(131, 50);
             this.Cappuccino.TabIndex = 0;
             this.Cappuccino.TabStop = false;
+            this.Cappuccino.Click += new System.EventHandler(this.Cappuccino_Click);
             // 
-            // label1
+            // lbl_Cappu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "0";
+            this.lbl_Cappu.AutoSize = true;
+            this.lbl_Cappu.Location = new System.Drawing.Point(235, 22);
+            this.lbl_Cappu.Name = "lbl_Cappu";
+            this.lbl_Cappu.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Cappu.TabIndex = 5;
+            this.lbl_Cappu.Text = "0";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.Latte);
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lbl_latte);
             this.panel3.Location = new System.Drawing.Point(12, 172);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 154);
@@ -168,22 +169,23 @@
             this.Latte.Size = new System.Drawing.Size(131, 50);
             this.Latte.TabIndex = 0;
             this.Latte.TabStop = false;
+            this.Latte.Click += new System.EventHandler(this.Latte_Click);
             // 
-            // label2
+            // lbl_latte
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(240, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "0";
+            this.lbl_latte.AutoSize = true;
+            this.lbl_latte.Location = new System.Drawing.Point(240, 22);
+            this.lbl_latte.Name = "lbl_latte";
+            this.lbl_latte.Size = new System.Drawing.Size(13, 13);
+            this.lbl_latte.TabIndex = 5;
+            this.lbl_latte.Text = "0";
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.Espresso);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lbl_espresso);
             this.panel4.Location = new System.Drawing.Point(347, 172);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(320, 154);
@@ -218,15 +220,16 @@
             this.Espresso.Size = new System.Drawing.Size(131, 50);
             this.Espresso.TabIndex = 0;
             this.Espresso.TabStop = false;
+            this.Espresso.Click += new System.EventHandler(this.Espresso_Click);
             // 
-            // label3
+            // lbl_espresso
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "0";
+            this.lbl_espresso.AutoSize = true;
+            this.lbl_espresso.Location = new System.Drawing.Point(240, 22);
+            this.lbl_espresso.Name = "lbl_espresso";
+            this.lbl_espresso.Size = new System.Drawing.Size(13, 13);
+            this.lbl_espresso.TabIndex = 5;
+            this.lbl_espresso.Text = "0";
             // 
             // ShopUndUpgrade
             // 
@@ -267,15 +270,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Cappuccino;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Cappu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox Latte;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_latte;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox Espresso;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_espresso;
     }
 }
