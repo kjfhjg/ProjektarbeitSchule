@@ -18,7 +18,10 @@ namespace Projektarbeit
         {
             InitializeComponent();
             m_kaffewelt = new KlasseKaffeWelt();
+            setBeensBitmap();
+            setBeensKosten();
         }
+        #region Methoden
         public void Refresh()
         {
             if (m_refresh != null)
@@ -26,7 +29,24 @@ namespace Projektarbeit
                 m_refresh();
             }
         }
-
+        //Die Bitmaps(Bilder) werden entsprechend aus den Ressourcen bezogen und eingefügt.
+        private void setBeensBitmap()
+        {
+            Milchkaffe.BackgroundImage = m_kaffewelt.getAnzahlBeens(0);
+            Cappuccino.BackgroundImage = m_kaffewelt.getAnzahlBeens(1);
+            Latte.BackgroundImage = m_kaffewelt.getAnzahlBeens(2);
+            Espresso.BackgroundImage = m_kaffewelt.getAnzahlBeens(3);
+        }
+        //Die Kosten werden Passend in die Labels eingefügt und angezeigt.
+        private void setBeensKosten()
+        {
+            lbl_MilchkaffeKosten.Text = $"{m_kaffewelt.getBeensKosten(0):0} Taler";
+            lbl_CappuccinoKosten.Text = $"{m_kaffewelt.getBeensKosten(1):0} Taler";
+            lbl_LatteKosten.Text = $"{m_kaffewelt.getBeensKosten(2):0} Taler";
+            lbl_EspressoKosten.Text = $"{m_kaffewelt.getBeensKosten(3):0} Taler";
+        }
+        #endregion 
+        #region ClickEvents
         private void Click(object sender, EventArgs e)
         {
             int tmp_anzahl;
@@ -42,6 +62,9 @@ namespace Projektarbeit
                 ((Label)this.Controls.Find(tmp_name, true)[0]).Text = tmp_anzahl.ToString();
             }
             Refresh();
+            setBeensBitmap();
+            setBeensKosten();
         }
+        #endregion
     }
 }

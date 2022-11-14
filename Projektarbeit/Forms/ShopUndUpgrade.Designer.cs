@@ -41,10 +41,13 @@
             this.Latte = new System.Windows.Forms.PictureBox();
             this.lbl_Latte = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_EspressoKosten = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Espresso = new System.Windows.Forms.PictureBox();
             this.lbl_Espresso = new System.Windows.Forms.Label();
+            this.lbl_MilchkaffeKosten = new System.Windows.Forms.Label();
+            this.lbl_CappuccinoKosten = new System.Windows.Forms.Label();
+            this.lbl_LatteKosten = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Milchkaffe)).BeginInit();
@@ -71,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbl_MilchkaffeKosten);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.Milchkaffe);
             this.panel1.Controls.Add(this.lbl_Milchkaffe);
@@ -103,6 +107,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lbl_CappuccinoKosten);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.Cappuccino);
             this.panel2.Controls.Add(this.lbl_Cappuccino);
@@ -144,6 +149,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lbl_LatteKosten);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.Latte);
             this.panel3.Controls.Add(this.lbl_Latte);
@@ -185,7 +191,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lbl_EspressoKosten);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.Espresso);
             this.panel4.Controls.Add(this.lbl_Espresso);
@@ -194,15 +200,15 @@
             this.panel4.Size = new System.Drawing.Size(320, 154);
             this.panel4.TabIndex = 10;
             // 
-            // label4
+            // lbl_EspressoKosten
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(222, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0 Taler";
+            this.lbl_EspressoKosten.AutoSize = true;
+            this.lbl_EspressoKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_EspressoKosten.Location = new System.Drawing.Point(222, 121);
+            this.lbl_EspressoKosten.Name = "lbl_EspressoKosten";
+            this.lbl_EspressoKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_EspressoKosten.TabIndex = 6;
+            this.lbl_EspressoKosten.Text = "0 Taler";
             // 
             // pictureBox6
             // 
@@ -216,7 +222,7 @@
             // Espresso
             // 
             this.Espresso.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Espresso.BackgroundImage = global::Projektarbeit.Properties.Resources.D9DAAAEB_9E0C_433E_A4AD_3DFED8A0B0AC;
+            this.Espresso.BackgroundImage = global::Projektarbeit.Properties.Resources.unknown4;
             this.Espresso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Espresso.Location = new System.Drawing.Point(175, 59);
             this.Espresso.Name = "Espresso";
@@ -234,6 +240,36 @@
             this.lbl_Espresso.Size = new System.Drawing.Size(13, 13);
             this.lbl_Espresso.TabIndex = 5;
             this.lbl_Espresso.Text = "0";
+            // 
+            // lbl_MilchkaffeKosten
+            // 
+            this.lbl_MilchkaffeKosten.AutoSize = true;
+            this.lbl_MilchkaffeKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_MilchkaffeKosten.Location = new System.Drawing.Point(224, 121);
+            this.lbl_MilchkaffeKosten.Name = "lbl_MilchkaffeKosten";
+            this.lbl_MilchkaffeKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_MilchkaffeKosten.TabIndex = 7;
+            this.lbl_MilchkaffeKosten.Text = "0 Taler";
+            // 
+            // lbl_CappuccinoKosten
+            // 
+            this.lbl_CappuccinoKosten.AutoSize = true;
+            this.lbl_CappuccinoKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_CappuccinoKosten.Location = new System.Drawing.Point(222, 121);
+            this.lbl_CappuccinoKosten.Name = "lbl_CappuccinoKosten";
+            this.lbl_CappuccinoKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_CappuccinoKosten.TabIndex = 8;
+            this.lbl_CappuccinoKosten.Text = "0 Taler";
+            // 
+            // lbl_LatteKosten
+            // 
+            this.lbl_LatteKosten.AutoSize = true;
+            this.lbl_LatteKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_LatteKosten.Location = new System.Drawing.Point(224, 121);
+            this.lbl_LatteKosten.Name = "lbl_LatteKosten";
+            this.lbl_LatteKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_LatteKosten.TabIndex = 8;
+            this.lbl_LatteKosten.Text = "0 Taler";
             // 
             // ShopUndUpgrade
             // 
@@ -280,9 +316,12 @@
         private System.Windows.Forms.PictureBox Latte;
         private System.Windows.Forms.Label lbl_Latte;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_EspressoKosten;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox Espresso;
         private System.Windows.Forms.Label lbl_Espresso;
+        private System.Windows.Forms.Label lbl_MilchkaffeKosten;
+        private System.Windows.Forms.Label lbl_CappuccinoKosten;
+        private System.Windows.Forms.Label lbl_LatteKosten;
     }
 }

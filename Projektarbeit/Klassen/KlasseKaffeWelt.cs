@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Drawing;
 
 namespace Projektarbeit
 {
@@ -54,7 +55,7 @@ namespace Projektarbeit
                     {
                         Clicker.m_PunkteGesamt -= m_verkaufsgüter[i].m_kosten;
                         m_verkaufsgüter[i].m_anzahl += 1;
-                        m_verkaufsgüter[i].m_kosten = m_verkaufsgüter[i].m_kosten * 1.5;
+                        m_verkaufsgüter[i].m_kosten = m_verkaufsgüter[i].m_kosten * 1.1;
                         Clicker.m_HauptCount += m_verkaufsgüter[i].m_count;
                         return m_verkaufsgüter[i].m_anzahl;
                     }
@@ -76,5 +77,35 @@ namespace Projektarbeit
                 return "";
             }
         }
+        //Die Methode bekommt die Position der Verkaufsgüter übergeben und sucht anhand dieser das Passende Objekt und dessen Anzahl.
+        //Die Anzahl wird abgeglichen und es wird dann die Passende Bitmap zurückgegeben.
+        public Bitmap getAnzahlBeens(int position)
+        {
+            if (m_verkaufsgüter[position].m_anzahl < 50)
+            {
+                return Properties.Resources.unknown;
+            }
+            else if (m_verkaufsgüter[position].m_anzahl >= 50 && m_verkaufsgüter[position].m_anzahl < 150)
+            {
+                return Properties.Resources.unknown2;
+            }
+            else if (m_verkaufsgüter[position].m_anzahl >= 150 && m_verkaufsgüter[position].m_anzahl < 300)
+            {
+                return Properties.Resources.unknown3;
+            }
+            else if (m_verkaufsgüter[position].m_anzahl >= 350 )
+            {
+                return Properties.Resources.unknown4;
+            }
+
+            return Properties.Resources.unknown;
+        }
+        //Die Methode bekommt die Position der Verkaufsgüter übergeben und sucht anhand dieser das Passende Objekt und dessen Kosten.
+        //Die Kosten werden als integer zurückgegeben.
+        public double getBeensKosten(int position)
+        {
+           return m_verkaufsgüter[position].m_kosten;
+        }
+
     }
 }
