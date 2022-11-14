@@ -48,10 +48,17 @@ namespace Projektarbeit
             AusgabePunkte();
         }
         #endregion
-
         private void btn_Laden_Click(object sender, EventArgs e)
         {
             Kaufladen.ShowDialog();
+        }
+
+        private void Clicker_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.I)
+            {
+                Kaufladen.ShowDialog();
+            }
         }
     }
 }

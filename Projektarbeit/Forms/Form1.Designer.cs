@@ -115,6 +115,7 @@
             this.Controls.Add(this.btn_HauptClicker);
             this.Name = "Clicker";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Clicker_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).EndInit();
             this.ResumeLayout(false);

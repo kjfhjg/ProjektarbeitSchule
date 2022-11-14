@@ -52,6 +52,12 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Clicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Hauptmenü.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hauptmenü.Designer.cs">
+      <DependentUpon>Hauptmenü.cs</DependentUpon>
+    </Compile>
     <Compile Include="Klassen\KlasseKaffeWelt.cs" />
     <Compile Include="Forms\ShopUndUpgrade.cs">
       <SubType>Form</SubType>
@@ -61,8 +67,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steuerelemente\uc_Einstellungen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Steuerelemente\uc_Einstellungen.Designer.cs">
+      <DependentUpon>uc_Einstellungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Steuerelemente\uc_NeuesSpiel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Steuerelemente\uc_NeuesSpiel.Designer.cs">
+      <DependentUpon>uc_NeuesSpiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Steuerelemente\uc_SpielLaden.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Steuerelemente\uc_SpielLaden.Designer.cs">
+      <DependentUpon>uc_SpielLaden.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Clicker.resx">
       <DependentUpon>Clicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hauptmenü.resx">
+      <DependentUpon>Hauptmenü.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShopUndUpgrade.resx">
       <DependentUpon>ShopUndUpgrade.cs</DependentUpon>

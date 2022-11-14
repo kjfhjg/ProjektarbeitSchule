@@ -30,13 +30,16 @@
         {
             this.lbl_Milchkaffe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_MilchkaffeKosten = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Milchkaffe = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_CappuccinoKosten = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cappuccino = new System.Windows.Forms.PictureBox();
             this.lbl_Cappuccino = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_LatteKosten = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Latte = new System.Windows.Forms.PictureBox();
             this.lbl_Latte = new System.Windows.Forms.Label();
@@ -45,9 +48,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Espresso = new System.Windows.Forms.PictureBox();
             this.lbl_Espresso = new System.Windows.Forms.Label();
-            this.lbl_MilchkaffeKosten = new System.Windows.Forms.Label();
-            this.lbl_CappuccinoKosten = new System.Windows.Forms.Label();
-            this.lbl_LatteKosten = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Milchkaffe)).BeginInit();
@@ -83,6 +83,16 @@
             this.panel1.Size = new System.Drawing.Size(320, 154);
             this.panel1.TabIndex = 7;
             // 
+            // lbl_MilchkaffeKosten
+            // 
+            this.lbl_MilchkaffeKosten.AutoSize = true;
+            this.lbl_MilchkaffeKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_MilchkaffeKosten.Location = new System.Drawing.Point(224, 121);
+            this.lbl_MilchkaffeKosten.Name = "lbl_MilchkaffeKosten";
+            this.lbl_MilchkaffeKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_MilchkaffeKosten.TabIndex = 7;
+            this.lbl_MilchkaffeKosten.Text = "0 Taler";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -115,6 +125,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(320, 154);
             this.panel2.TabIndex = 8;
+            // 
+            // lbl_CappuccinoKosten
+            // 
+            this.lbl_CappuccinoKosten.AutoSize = true;
+            this.lbl_CappuccinoKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_CappuccinoKosten.Location = new System.Drawing.Point(222, 121);
+            this.lbl_CappuccinoKosten.Name = "lbl_CappuccinoKosten";
+            this.lbl_CappuccinoKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_CappuccinoKosten.TabIndex = 8;
+            this.lbl_CappuccinoKosten.Text = "0 Taler";
             // 
             // pictureBox1
             // 
@@ -157,6 +177,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 154);
             this.panel3.TabIndex = 9;
+            // 
+            // lbl_LatteKosten
+            // 
+            this.lbl_LatteKosten.AutoSize = true;
+            this.lbl_LatteKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_LatteKosten.Location = new System.Drawing.Point(224, 121);
+            this.lbl_LatteKosten.Name = "lbl_LatteKosten";
+            this.lbl_LatteKosten.Size = new System.Drawing.Size(40, 13);
+            this.lbl_LatteKosten.TabIndex = 8;
+            this.lbl_LatteKosten.Text = "0 Taler";
             // 
             // pictureBox4
             // 
@@ -241,36 +271,6 @@
             this.lbl_Espresso.TabIndex = 5;
             this.lbl_Espresso.Text = "0";
             // 
-            // lbl_MilchkaffeKosten
-            // 
-            this.lbl_MilchkaffeKosten.AutoSize = true;
-            this.lbl_MilchkaffeKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_MilchkaffeKosten.Location = new System.Drawing.Point(224, 121);
-            this.lbl_MilchkaffeKosten.Name = "lbl_MilchkaffeKosten";
-            this.lbl_MilchkaffeKosten.Size = new System.Drawing.Size(40, 13);
-            this.lbl_MilchkaffeKosten.TabIndex = 7;
-            this.lbl_MilchkaffeKosten.Text = "0 Taler";
-            // 
-            // lbl_CappuccinoKosten
-            // 
-            this.lbl_CappuccinoKosten.AutoSize = true;
-            this.lbl_CappuccinoKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_CappuccinoKosten.Location = new System.Drawing.Point(222, 121);
-            this.lbl_CappuccinoKosten.Name = "lbl_CappuccinoKosten";
-            this.lbl_CappuccinoKosten.Size = new System.Drawing.Size(40, 13);
-            this.lbl_CappuccinoKosten.TabIndex = 8;
-            this.lbl_CappuccinoKosten.Text = "0 Taler";
-            // 
-            // lbl_LatteKosten
-            // 
-            this.lbl_LatteKosten.AutoSize = true;
-            this.lbl_LatteKosten.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_LatteKosten.Location = new System.Drawing.Point(224, 121);
-            this.lbl_LatteKosten.Name = "lbl_LatteKosten";
-            this.lbl_LatteKosten.Size = new System.Drawing.Size(40, 13);
-            this.lbl_LatteKosten.TabIndex = 8;
-            this.lbl_LatteKosten.Text = "0 Taler";
-            // 
             // ShopUndUpgrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +281,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ShopUndUpgrade";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShopUndUpgrade_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
