@@ -38,7 +38,7 @@ namespace Projektarbeit
         public void AusgabePunkte()
         {
             lbl_TalerGesamt.Text = $"{m_PunkteGesamt:0}";
-            lbl_TalerPerSecond.Text = m_HauptCount.ToString();
+            lbl_TalerPerClick.Text = m_HauptCount.ToString();
         }
         #region ClickEvents
         private void Hauptklicker_Click(object sender, EventArgs e)

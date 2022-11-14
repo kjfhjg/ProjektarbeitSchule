@@ -33,7 +33,7 @@
             this.btn_Laden = new System.Windows.Forms.PictureBox();
             this.btn_HauptClicker = new System.Windows.Forms.PictureBox();
             this.lbl_TalerGesamt = new System.Windows.Forms.TextBox();
-            this.lbl_TalerPerSecond = new System.Windows.Forms.TextBox();
+            this.lbl_TalerPerClick = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).BeginInit();
             this.SuspendLayout();
@@ -41,11 +41,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 90);
+            this.label1.Location = new System.Drawing.Point(99, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Kaffee Pro Sekunde";
+            this.label1.Text = "Kaffee Pro Click";
             // 
             // label2
             // 
@@ -90,24 +90,24 @@
             this.lbl_TalerGesamt.Text = "0";
             this.lbl_TalerGesamt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbl_TalerPerSecond
+            // lbl_TalerPerClick
             // 
-            this.lbl_TalerPerSecond.BackColor = System.Drawing.SystemColors.Control;
-            this.lbl_TalerPerSecond.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbl_TalerPerSecond.Enabled = false;
-            this.lbl_TalerPerSecond.Location = new System.Drawing.Point(91, 106);
-            this.lbl_TalerPerSecond.Name = "lbl_TalerPerSecond";
-            this.lbl_TalerPerSecond.Size = new System.Drawing.Size(100, 13);
-            this.lbl_TalerPerSecond.TabIndex = 8;
-            this.lbl_TalerPerSecond.Text = "0";
-            this.lbl_TalerPerSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lbl_TalerPerClick.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_TalerPerClick.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_TalerPerClick.Enabled = false;
+            this.lbl_TalerPerClick.Location = new System.Drawing.Point(91, 106);
+            this.lbl_TalerPerClick.Name = "lbl_TalerPerClick";
+            this.lbl_TalerPerClick.Size = new System.Drawing.Size(100, 13);
+            this.lbl_TalerPerClick.TabIndex = 8;
+            this.lbl_TalerPerClick.Text = "0";
+            this.lbl_TalerPerClick.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 391);
-            this.Controls.Add(this.lbl_TalerPerSecond);
+            this.Controls.Add(this.lbl_TalerPerClick);
             this.Controls.Add(this.lbl_TalerGesamt);
             this.Controls.Add(this.btn_Laden);
             this.Controls.Add(this.label2);
@@ -129,7 +129,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btn_Laden;
         private System.Windows.Forms.TextBox lbl_TalerGesamt;
-        private System.Windows.Forms.TextBox lbl_TalerPerSecond;
+        private System.Windows.Forms.TextBox lbl_TalerPerClick;
     }
 }
 
