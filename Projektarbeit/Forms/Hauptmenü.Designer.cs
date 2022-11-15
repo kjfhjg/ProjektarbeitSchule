@@ -28,12 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_NeuesSpiel = new System.Windows.Forms.Button();
+            this.btn_SpielLaden = new System.Windows.Forms.Button();
+            this.btn_Einstellungen = new System.Windows.Forms.Button();
+            this.btn_Verlassen = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_NeuesSpiel
+            // 
+            this.btn_NeuesSpiel.Location = new System.Drawing.Point(214, 54);
+            this.btn_NeuesSpiel.Name = "btn_NeuesSpiel";
+            this.btn_NeuesSpiel.Size = new System.Drawing.Size(150, 50);
+            this.btn_NeuesSpiel.TabIndex = 0;
+            this.btn_NeuesSpiel.Text = "Neues Spiel";
+            this.btn_NeuesSpiel.UseVisualStyleBackColor = true;
+            this.btn_NeuesSpiel.Click += new System.EventHandler(this.btn_NeuesSpiel_Click);
+            // 
+            // btn_SpielLaden
+            // 
+            this.btn_SpielLaden.Location = new System.Drawing.Point(214, 110);
+            this.btn_SpielLaden.Name = "btn_SpielLaden";
+            this.btn_SpielLaden.Size = new System.Drawing.Size(150, 50);
+            this.btn_SpielLaden.TabIndex = 1;
+            this.btn_SpielLaden.Text = "Spiel Laden";
+            this.btn_SpielLaden.UseVisualStyleBackColor = true;
+            this.btn_SpielLaden.Click += new System.EventHandler(this.btn_SpielLaden_Click);
+            // 
+            // btn_Einstellungen
+            // 
+            this.btn_Einstellungen.Location = new System.Drawing.Point(214, 166);
+            this.btn_Einstellungen.Name = "btn_Einstellungen";
+            this.btn_Einstellungen.Size = new System.Drawing.Size(150, 50);
+            this.btn_Einstellungen.TabIndex = 2;
+            this.btn_Einstellungen.Text = "Einstellungen";
+            this.btn_Einstellungen.UseVisualStyleBackColor = true;
+            this.btn_Einstellungen.Click += new System.EventHandler(this.btn_Einstellungen_Click);
+            // 
+            // btn_Verlassen
+            // 
+            this.btn_Verlassen.Location = new System.Drawing.Point(214, 222);
+            this.btn_Verlassen.Name = "btn_Verlassen";
+            this.btn_Verlassen.Size = new System.Drawing.Size(150, 50);
+            this.btn_Verlassen.TabIndex = 3;
+            this.btn_Verlassen.Text = "Verlassen";
+            this.btn_Verlassen.UseVisualStyleBackColor = true;
+            this.btn_Verlassen.Click += new System.EventHandler(this.btn_Verlassen_Click);
+            // 
+            // Hauptmenü
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(599, 335);
+            this.Controls.Add(this.btn_Verlassen);
+            this.Controls.Add(this.btn_Einstellungen);
+            this.Controls.Add(this.btn_SpielLaden);
+            this.Controls.Add(this.btn_NeuesSpiel);
+            this.Name = "Hauptmenü";
             this.Text = "Hauptmenü";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_NeuesSpiel;
+        private System.Windows.Forms.Button btn_SpielLaden;
+        private System.Windows.Forms.Button btn_Einstellungen;
+        private System.Windows.Forms.Button btn_Verlassen;
     }
 }

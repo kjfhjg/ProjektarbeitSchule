@@ -16,7 +16,7 @@ namespace Projektarbeit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Clicker());
+            Application.Run(new Hauptmenü());
         }
     }
 }
