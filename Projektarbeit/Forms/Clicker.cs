@@ -17,15 +17,18 @@ namespace Projektarbeit
         public static decimal m_HauptCount { get; set; } = (decimal)0.1;
         public static double m_PunkteGesamt { get; set; } = 100000000;
 
+        KlasseKaffeWelt m_AuswahlWelt;
+
         decimal m_zwischenPunkte;
         ShopUndUpgrade Kaufladen;
 
-        public Clicker()
+        public Clicker(KlasseKaffeWelt auswahl)
         {
             InitializeComponent();
             AusgabePunkte();
-            Kaufladen = new ShopUndUpgrade();
+            Kaufladen = new ShopUndUpgrade(auswahl);
             Kaufladen.m_refresh += AusgabePunkte;
+            m_AuswahlWelt = auswahl;
         }
         public void Runden()
         {
@@ -47,7 +50,6 @@ namespace Projektarbeit
             Runden();
             AusgabePunkte();
         }
-        #endregion
         private void btn_Laden_Click(object sender, EventArgs e)
         {
             Kaufladen.ShowDialog();
@@ -55,10 +57,11 @@ namespace Projektarbeit
 
         private void Clicker_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.I)
+            if (e.KeyCode == Keys.I)
             {
                 Kaufladen.ShowDialog();
             }
         }
+        #endregion
     }
 }

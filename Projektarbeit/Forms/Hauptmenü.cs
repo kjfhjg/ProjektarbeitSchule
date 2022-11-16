@@ -17,6 +17,13 @@ namespace Projektarbeit
             InitializeComponent();
         }
         //Setzt sämtliche Controls auf unsichtbar
+        public void zeigeHauptmenü()
+        {
+            foreach (Control item in this.Controls)
+            {
+                item.Visible = true;
+            }
+        }
         private void versteckeHauptmenü()
         {
             foreach (Control item in this.Controls)
@@ -33,7 +40,7 @@ namespace Projektarbeit
         private void btn_NeuesSpiel_Click(object sender, EventArgs e)
         {
             versteckeHauptmenü();
-            uc_NeuesSpiel uc_neuesSpiel = new uc_NeuesSpiel();
+            uc_NeuesSpiel uc_neuesSpiel = new uc_NeuesSpiel(this);
             uc_neuesSpiel.Dock = DockStyle.Fill;
             this.Controls.Add(uc_neuesSpiel);
         }

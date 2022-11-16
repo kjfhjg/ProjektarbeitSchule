@@ -14,10 +14,10 @@ namespace Projektarbeit
     {
         public event delRefresh m_refresh;
         KlasseKaffeWelt m_kaffewelt;
-        public ShopUndUpgrade()
+        public ShopUndUpgrade(KlasseKaffeWelt kaffewelt)
         {
             InitializeComponent();
-            m_kaffewelt = new KlasseKaffeWelt();
+            m_kaffewelt = kaffewelt;
             setBeensBitmap();
             setBeensKosten();
         }

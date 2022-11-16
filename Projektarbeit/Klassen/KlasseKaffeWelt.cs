@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace Projektarbeit
 {
-    class KlasseKaffeWelt
+    public class KlasseKaffeWelt
     {
         public struct Verkaufsgut
         {
@@ -23,17 +23,29 @@ namespace Projektarbeit
             public bool m_upgrade;
         }
         Verkaufsgut[] m_verkaufsgüter;
-        public KlasseKaffeWelt()
+        public KlasseKaffeWelt(int auswahl)
         {
-            NeuesSpiel();
+            if(auswahl==0)
+            {
+                NeuesSpiel(Properties.Resources.KaffeeArten);
+            }
+            else if (auswahl == 1)
+            {
+
+            }
+            else if (auswahl == 2)
+            {
+
+            }
+
         }
-        public void NeuesSpiel()
+        public void NeuesSpiel(string resources)
         {
             string temp;
             int zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
 
-            temp = Properties.Resources.KaffeeArten;
+            temp = resources;
             string[] stringAufspalten = temp.Split(' ');
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
