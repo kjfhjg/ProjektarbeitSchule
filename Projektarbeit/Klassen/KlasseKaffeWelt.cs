@@ -46,7 +46,12 @@ namespace Projektarbeit
             m_verkaufsgüter = new Verkaufsgut[4];
 
             temp = resources;
-            string[] stringAufspalten = temp.Split(' ');
+            string[] stringAufspalten = temp.Split('\r');
+
+            // entferne alle umruchzeichen aus jedem String
+            for (int i = 0; i < stringAufspalten.Length; i++)
+                stringAufspalten[i] = stringAufspalten[i].Replace("\n", "");
+
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
                 m_verkaufsgüter[i].m_name = stringAufspalten[zaehler++];
@@ -57,6 +62,7 @@ namespace Projektarbeit
                 m_verkaufsgüter[i].m_upgrade = false;
             }
         }
+
         public int Kaufen(object p_sender)
         {
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
@@ -119,5 +125,18 @@ namespace Projektarbeit
            return m_verkaufsgüter[position].m_kosten;
         }
 
+        public void Save()
+        {
+            File.WriteAllText("Save\\KaffeWelt.txt", "");
+            foreach (Verkaufsgut gut in m_verkaufsgüter)
+            {
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_name + "\r\n");
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_anzahl.ToString() + "\r\n");
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_tassenGröße.ToString() + "\r\n");
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_kosten.ToString() + "\r\n");
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_count.ToString() + "\r\n");
+                File.AppendAllText("Save\\KaffeWelt.txt", gut.m_upgrade.ToString() + "\r\n");
+            }
+        }
     }
 }

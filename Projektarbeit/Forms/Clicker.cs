@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projektarbeit
@@ -16,6 +9,8 @@ namespace Projektarbeit
 
         public static decimal m_HauptCount { get; set; } = (decimal)0.1;
         public static double m_PunkteGesamt { get; set; } = 100000000;
+
+        public Hauptmenü creator;
 
         KlasseKaffeWelt m_AuswahlWelt;
 
@@ -43,7 +38,7 @@ namespace Projektarbeit
             lbl_TalerGesamt.Text = $"{m_PunkteGesamt:0}";
             lbl_TalerPerClick.Text = m_HauptCount.ToString();
         }
-        #region ClickEvents
+        #region Click Funktionen
         private void Hauptklicker_Click(object sender, EventArgs e)
         {
             m_zwischenPunkte += m_HauptCount;
@@ -63,5 +58,11 @@ namespace Projektarbeit
             }
         }
         #endregion
+
+        private void Clicker_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            m_AuswahlWelt.Save();
+            creator.Show();
+        }
     }
 }

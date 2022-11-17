@@ -59,7 +59,7 @@ namespace Projektarbeit
                 tmp_name = KlasseKaffeWelt.BekommeControleName(sender);
                 tmp_name = "lbl_" + tmp_name;
                 //Suche nach Control mit tmp_name, cast dieses in Label Array , nehme erstes Array Element und weise Text zu!     
-                ((Label)this.Controls.Find(tmp_name, true)[0]).Text = tmp_anzahl.ToString();
+                ((TextBox)this.Controls.Find(tmp_name, true)[0]).Text = tmp_anzahl.ToString();
             }
             Refresh();
             setBeensBitmap();

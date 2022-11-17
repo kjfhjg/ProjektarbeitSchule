@@ -36,10 +36,9 @@
             // 
             // btn_NeuesSpiel
             // 
-            this.btn_NeuesSpiel.Location = new System.Drawing.Point(424, 66);
-            this.btn_NeuesSpiel.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btn_NeuesSpiel.Location = new System.Drawing.Point(134, 23);
             this.btn_NeuesSpiel.Name = "btn_NeuesSpiel";
-            this.btn_NeuesSpiel.Size = new System.Drawing.Size(475, 142);
+            this.btn_NeuesSpiel.Size = new System.Drawing.Size(150, 50);
             this.btn_NeuesSpiel.TabIndex = 0;
             this.btn_NeuesSpiel.Text = "Neues Spiel";
             this.btn_NeuesSpiel.UseVisualStyleBackColor = true;
@@ -47,10 +46,9 @@
             // 
             // btn_SpielLaden
             // 
-            this.btn_SpielLaden.Location = new System.Drawing.Point(424, 225);
-            this.btn_SpielLaden.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btn_SpielLaden.Location = new System.Drawing.Point(134, 79);
             this.btn_SpielLaden.Name = "btn_SpielLaden";
-            this.btn_SpielLaden.Size = new System.Drawing.Size(475, 142);
+            this.btn_SpielLaden.Size = new System.Drawing.Size(150, 50);
             this.btn_SpielLaden.TabIndex = 1;
             this.btn_SpielLaden.Text = "Spiel Laden";
             this.btn_SpielLaden.UseVisualStyleBackColor = true;
@@ -58,10 +56,9 @@
             // 
             // btn_Einstellungen
             // 
-            this.btn_Einstellungen.Location = new System.Drawing.Point(424, 384);
-            this.btn_Einstellungen.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btn_Einstellungen.Location = new System.Drawing.Point(134, 135);
             this.btn_Einstellungen.Name = "btn_Einstellungen";
-            this.btn_Einstellungen.Size = new System.Drawing.Size(475, 142);
+            this.btn_Einstellungen.Size = new System.Drawing.Size(150, 50);
             this.btn_Einstellungen.TabIndex = 2;
             this.btn_Einstellungen.Text = "Einstellungen";
             this.btn_Einstellungen.UseVisualStyleBackColor = true;
@@ -69,10 +66,9 @@
             // 
             // btn_Verlassen
             // 
-            this.btn_Verlassen.Location = new System.Drawing.Point(424, 544);
-            this.btn_Verlassen.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.btn_Verlassen.Location = new System.Drawing.Point(134, 191);
             this.btn_Verlassen.Name = "btn_Verlassen";
-            this.btn_Verlassen.Size = new System.Drawing.Size(475, 142);
+            this.btn_Verlassen.Size = new System.Drawing.Size(150, 50);
             this.btn_Verlassen.TabIndex = 3;
             this.btn_Verlassen.Text = "Verlassen";
             this.btn_Verlassen.UseVisualStyleBackColor = true;
@@ -80,16 +76,16 @@
             // 
             // Hauptmenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1305, 748);
+            this.ClientSize = new System.Drawing.Size(412, 263);
             this.Controls.Add(this.btn_Verlassen);
             this.Controls.Add(this.btn_Einstellungen);
             this.Controls.Add(this.btn_SpielLaden);
             this.Controls.Add(this.btn_NeuesSpiel);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Hauptmenü";
             this.Text = "Hauptmenü";
+            this.Load += new System.EventHandler(this.Hauptmenü_Load);
             this.ResumeLayout(false);
 
         }
