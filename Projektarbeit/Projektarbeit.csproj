@@ -99,6 +99,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Steuerelemente\uc_Einstellungen.resx">
+      <DependentUpon>uc_Einstellungen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Steuerelemente\uc_NeuesSpiel.resx">
       <DependentUpon>uc_NeuesSpiel.cs</DependentUpon>
     </EmbeddedResource>

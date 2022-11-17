@@ -40,10 +40,10 @@ namespace Projektarbeit
         //Die Kosten werden Passend in die Labels eingefügt und angezeigt.
         private void setBeensKosten()
         {
-            lbl_MilchkaffeKosten.Text = $"{m_kaffewelt.getBeensKosten(0):0} Taler";
-            lbl_CappuccinoKosten.Text = $"{m_kaffewelt.getBeensKosten(1):0} Taler";
-            lbl_LatteKosten.Text = $"{m_kaffewelt.getBeensKosten(2):0} Taler";
-            lbl_EspressoKosten.Text = $"{m_kaffewelt.getBeensKosten(3):0} Taler";
+            lbl_MilchkaffeKosten.Text = $"{m_kaffewelt.getBeensKosten(0):0}";
+            lbl_CappuccinoKosten.Text = $"{m_kaffewelt.getBeensKosten(1):0}";
+            lbl_LatteKosten.Text = $"{m_kaffewelt.getBeensKosten(2):0}";
+            lbl_EspressoKosten.Text = $"{m_kaffewelt.getBeensKosten(3):0}";
         }
         #endregion 
         #region ClickEvents

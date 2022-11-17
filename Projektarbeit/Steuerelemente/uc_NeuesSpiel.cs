@@ -23,7 +23,7 @@ namespace Projektarbeit
         private void btn_Zurück_Click(object sender, EventArgs e)
         {
             m_hauptmenü.zeigeHauptmenü();
-            this.Hide();
+            this.Dispose();
         }
 
         private void pb_Kaffe_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Projektarbeit
         {
             KlasseKaffeWelt klasseKaffeWelt = new KlasseKaffeWelt(m_auswahl);
             Clicker clicker = new Clicker(klasseKaffeWelt);
-            this.Hide();
+            Parent.Hide();
             clicker.Show();
         }
     }
