@@ -46,11 +46,11 @@ namespace Projektarbeit
             m_verkaufsgüter = new Verkaufsgut[4];
 
             temp = resources;
-            string[] stringAufspalten = temp.Split('\r');
+            string[] stringAufspalten = temp.Split('\n');
 
             // entferne alle umruchzeichen aus jedem String
             for (int i = 0; i < stringAufspalten.Length; i++)
-                stringAufspalten[i] = stringAufspalten[i].Replace("\n", "");
+                stringAufspalten[i] = stringAufspalten[i].Replace("\r", "");
 
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
