@@ -9,13 +9,16 @@ namespace Projektarbeit
 
         public static decimal m_HauptCount { get; set; } = (decimal)0.1;
         public static double m_PunkteGesamt { get; set; } = 100000000;
-
+        
         public Hauptmenü creator;
 
         KlasseKaffeWelt m_AuswahlWelt;
 
         decimal m_zwischenPunkte;
         ShopUndUpgrade Kaufladen;
+
+        int timer = 0;
+        
 
         public Clicker(KlasseKaffeWelt auswahl)
         {
@@ -45,6 +48,7 @@ namespace Projektarbeit
             Runden();
             AusgabePunkte();
         }
+        
         private void btn_Laden_Click(object sender, EventArgs e)
         {
             Kaufladen.ShowDialog();
@@ -58,6 +62,17 @@ namespace Projektarbeit
             }
         }
         #endregion
+        //Für den AUtoclicker
+       /* private void tmr_autoclicker_Tick(object sender, EventArgs e)
+        {
+            if (timer % (16 - m_MeilensteineGesamt) == 0 && m_MeilensteineGesamt != 0)
+            {
+                m_zwischenPunkte += m_HauptCount;
+                Runden();
+                AusgabePunkte();
+            }
+            timer++;
+        }*/
 
         private void Clicker_FormClosed(object sender, FormClosedEventArgs e)
         {

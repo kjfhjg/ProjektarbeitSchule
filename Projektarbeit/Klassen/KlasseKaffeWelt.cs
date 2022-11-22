@@ -23,9 +23,25 @@ namespace Projektarbeit
             public bool m_upgrade;
         }
         Verkaufsgut[] m_verkaufsgüter;
-        public KlasseKaffeWelt(int auswahl)
+        
+        //Autoclicker Meilensteine
+        //Meilensteine zur berechnung der Geschwindigkeit des Autoclickers.
+        /*
+        public struct UpgradeMeilenstein
         {
-            if(auswahl==0)
+            public int m_meilenstein_1;
+            public int m_meilenstein_2;
+            public int m_meilenstein_3;
+            public int m_meilenstein_4;
+            public int m_meilensteinAnzahl;
+        }
+        UpgradeMeilenstein[] m_meilensteine;
+        
+        public static int meilensteineGesamt = m_ */
+
+    public KlasseKaffeWelt(int auswahl)
+        {
+            if (auswahl == 0)
             {
                 NeuesSpiel(Properties.Resources.KaffeeArten);
             }
@@ -44,6 +60,7 @@ namespace Projektarbeit
             string temp;
             int zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
+            m_meilensteine = new UpgradeMeilenstein[4];
 
             temp = resources;
             string[] stringAufspalten = temp.Split('\n');
@@ -60,6 +77,14 @@ namespace Projektarbeit
                 m_verkaufsgüter[i].m_kosten = Convert.ToInt32(stringAufspalten[zaehler++]);
                 m_verkaufsgüter[i].m_count = Convert.ToDecimal(stringAufspalten[zaehler++]);
                 m_verkaufsgüter[i].m_upgrade = false;
+                //Autoclicker Meilensteine
+                /*
+                m_meilensteine[i].m_meilenstein_1 = 10;
+                m_meilensteine[i].m_meilenstein_2 = 25;
+                m_meilensteine[i].m_meilenstein_3 = 50;
+                m_meilensteine[i].m_meilenstein_4 = 100;
+                m_meilensteine[i].m_meilensteinAnzahl = 0;
+                */
             }
         }
 
@@ -111,7 +136,7 @@ namespace Projektarbeit
             {
                 return Properties.Resources.unknown3;
             }
-            else if (m_verkaufsgüter[position].m_anzahl >= 350 )
+            else if (m_verkaufsgüter[position].m_anzahl >= 350)
             {
                 return Properties.Resources.unknown4;
             }
@@ -122,7 +147,7 @@ namespace Projektarbeit
         //Die Kosten werden als integer zurückgegeben.
         public double getBeensKosten(int position)
         {
-           return m_verkaufsgüter[position].m_kosten;
+            return m_verkaufsgüter[position].m_kosten;
         }
 
         public void Save()
@@ -138,5 +163,24 @@ namespace Projektarbeit
                 File.AppendAllText("Save\\KaffeWelt.txt", gut.m_upgrade.ToString() + "\r\n");
             }
         }
+
+     /* #region MeilensteineUndErrungenschaften
+        public void AnzahlUpgradeMeilensteine()
+        {
+            int anzahl = 0;
+            for (int i = 0; i < m_verkaufsgüter.Length; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (m_verkaufsgüter[i].m_anzahl >= m_meilensteine[j].m_meilenstein_1)
+                    {
+                        anzahl++;
+                    }
+                }
+            }
+            m_meilensteine[0].m_meilensteinAnzahl = anzahl;
+        }
+
+        #endregion */
     }
 }

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Laden = new System.Windows.Forms.PictureBox();
             this.btn_HauptClicker = new System.Windows.Forms.PictureBox();
             this.lbl_TalerGesamt = new System.Windows.Forms.TextBox();
             this.lbl_TalerPerClick = new System.Windows.Forms.TextBox();
+            this.tmr_autoclicker = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +104,12 @@
             this.lbl_TalerPerClick.Text = "0";
             this.lbl_TalerPerClick.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tmr_autoclicker
+            // 
+            this.tmr_autoclicker.Enabled = true;
+            this.tmr_autoclicker.Interval = 300;
+            this.tmr_autoclicker.Tick += new System.EventHandler(this.tmr_autoclicker_Tick);
+            // 
             // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +140,7 @@
         private System.Windows.Forms.PictureBox btn_Laden;
         private System.Windows.Forms.TextBox lbl_TalerGesamt;
         private System.Windows.Forms.TextBox lbl_TalerPerClick;
+        private System.Windows.Forms.Timer tmr_autoclicker;
     }
 }
 
