@@ -106,8 +106,7 @@
             // 
             // tmr_autoclicker
             // 
-            this.tmr_autoclicker.Enabled = true;
-            this.tmr_autoclicker.Interval = 300;
+            this.tmr_autoclicker.Interval = 6000;
             this.tmr_autoclicker.Tick += new System.EventHandler(this.tmr_autoclicker_Tick);
             // 
             // Clicker
@@ -140,7 +139,7 @@
         private System.Windows.Forms.PictureBox btn_Laden;
         private System.Windows.Forms.TextBox lbl_TalerGesamt;
         private System.Windows.Forms.TextBox lbl_TalerPerClick;
-        private System.Windows.Forms.Timer tmr_autoclicker;
+        public System.Windows.Forms.Timer tmr_autoclicker;
     }
 }
 

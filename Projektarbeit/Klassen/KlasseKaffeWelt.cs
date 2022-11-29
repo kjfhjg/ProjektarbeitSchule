@@ -23,23 +23,9 @@ namespace Projektarbeit
             public bool m_upgrade;
         }
         Verkaufsgut[] m_verkaufsgüter;
-        
-        //Autoclicker Meilensteine
-        //Meilensteine zur berechnung der Geschwindigkeit des Autoclickers.
-        /*
-        public struct UpgradeMeilenstein
-        {
-            public int m_meilenstein_1;
-            public int m_meilenstein_2;
-            public int m_meilenstein_3;
-            public int m_meilenstein_4;
-            public int m_meilensteinAnzahl;
-        }
-        UpgradeMeilenstein[] m_meilensteine;
-        
-        public static int meilensteineGesamt = m_ */
+        public Clicker m_Clicker;
 
-    public KlasseKaffeWelt(int auswahl)
+        public KlasseKaffeWelt(int auswahl)
         {
             if (auswahl == 0)
             {
@@ -57,18 +43,19 @@ namespace Projektarbeit
         }
         public void NeuesSpiel(string resources)
         {
+            //Initialisieren und Deklarieren.
             string temp;
             int zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
-            m_meilensteine = new UpgradeMeilenstein[4];
 
             temp = resources;
             string[] stringAufspalten = temp.Split('\n');
 
-            // entferne alle umruchzeichen aus jedem String
+            // entferne alle umbruchzeichen aus jedem String.
             for (int i = 0; i < stringAufspalten.Length; i++)
                 stringAufspalten[i] = stringAufspalten[i].Replace("\r", "");
-
+            
+            //erstellt ein Struct mit den Verkaufsgütern die man im Shop kaufen kann.
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
                 m_verkaufsgüter[i].m_name = stringAufspalten[zaehler++];
@@ -77,17 +64,10 @@ namespace Projektarbeit
                 m_verkaufsgüter[i].m_kosten = Convert.ToInt32(stringAufspalten[zaehler++]);
                 m_verkaufsgüter[i].m_count = Convert.ToDecimal(stringAufspalten[zaehler++]);
                 m_verkaufsgüter[i].m_upgrade = false;
-                //Autoclicker Meilensteine
-                /*
-                m_meilensteine[i].m_meilenstein_1 = 10;
-                m_meilensteine[i].m_meilenstein_2 = 25;
-                m_meilensteine[i].m_meilenstein_3 = 50;
-                m_meilensteine[i].m_meilenstein_4 = 100;
-                m_meilensteine[i].m_meilensteinAnzahl = 0;
-                */
             }
         }
-
+        //Die Methode bekommt das Verkaufsgut übergeben und vergleicht die Kosten mit den aktuellen Punkten.
+        //Sind die Punkte genug für den Kauf dann wird die Anzahl des Verkaufsgut um 1, die Kosten und der Clickwert erhöht.
         public int Kaufen(object p_sender)
         {
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
@@ -100,6 +80,10 @@ namespace Projektarbeit
                         m_verkaufsgüter[i].m_anzahl += 1;
                         m_verkaufsgüter[i].m_kosten = m_verkaufsgüter[i].m_kosten * 1.1;
                         Clicker.m_HauptCount += m_verkaufsgüter[i].m_count;
+
+                        //Bei jedem Kauf eines Verkaufsgut wird nachgefragt ob sich etwas an der Autoclickgeschwindigkeit verändert.
+                        AnzahlUpgradeMeilensteine(m_verkaufsgüter[i].m_anzahl);
+
                         return m_verkaufsgüter[i].m_anzahl;
                     }
                 }
@@ -164,23 +148,34 @@ namespace Projektarbeit
             }
         }
 
-     /* #region MeilensteineUndErrungenschaften
-        public void AnzahlUpgradeMeilensteine()
+        #region MeilensteineUndErrungenschaften
+        //Wenn ein Verkaufsobjekt den jeweiligen Meilenstein erreicht wird der Autoclicker schneller
+        //Beim ersten Meilenstein wird der Autoclicker angeschalten
+        public void AnzahlUpgradeMeilensteine(int anzahlGüter)
         {
-            int anzahl = 0;
-            for (int i = 0; i < m_verkaufsgüter.Length; i++)
-            {
-                for (int j = 0; j < 4; j++)
+            int[] Meilensteine = new int[4]{10, 25, 50, 100};
+            int tmr_Intervall = m_Clicker.tmr_autoclicker.Interval;
+            int tmp_upgrade = 250;
+            
+                if (anzahlGüter == Meilensteine[0])
                 {
-                    if (m_verkaufsgüter[i].m_anzahl >= m_meilensteine[j].m_meilenstein_1)
-                    {
-                        anzahl++;
-                    }
+                tmr_Intervall -= tmp_upgrade;
+                m_Clicker.tmr_autoclicker.Start();
                 }
-            }
-            m_meilensteine[0].m_meilensteinAnzahl = anzahl;
+                if (anzahlGüter == Meilensteine[1])
+                {
+                tmr_Intervall -= tmp_upgrade;
+                }
+                if (anzahlGüter == Meilensteine[2])
+                {
+                tmr_Intervall -= tmp_upgrade;
+                }
+                if (anzahlGüter == Meilensteine[3])
+                {
+                tmr_Intervall -= tmp_upgrade;
+                }              
         }
 
-        #endregion */
+        #endregion
     }
 }

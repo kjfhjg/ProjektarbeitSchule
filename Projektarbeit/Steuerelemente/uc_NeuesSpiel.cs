@@ -36,6 +36,7 @@ namespace Projektarbeit
             KlasseKaffeWelt klasseKaffeWelt = new KlasseKaffeWelt(m_auswahl);
             Clicker clicker = new Clicker(klasseKaffeWelt);
             clicker.creator = m_hauptmenü;
+            klasseKaffeWelt.m_Clicker = clicker;
             Parent.Hide();
             clicker.Show();
         }
