@@ -46,7 +46,7 @@ namespace Projektarbeit
             lbl_EspressoKosten.Text = $"{m_kaffewelt.getBeensKosten(3):0}";
         }
         #endregion 
-        #region ClickEvents
+        #region Events
         private void Click(object sender, EventArgs e)
         {
             int tmp_anzahl;

@@ -19,7 +19,7 @@ namespace Projektarbeit
             InitializeComponent();
         }
 
-        #region Hauptmenü Kontrolle
+        #region Methoden
         //Setzt sämtliche Controls auf unsichtbar
         public void zeigeHauptmenü()
         {
@@ -43,8 +43,7 @@ namespace Projektarbeit
             if (!File.Exists("Save\\KaffeWelt.txt")) File.Create("Save\\KaffeWelt.txt");
         }
         #endregion
-
-        #region Click Funktionen
+        #region Events
         //Schließt das gesamte Programm
         private void btn_Verlassen_Click(object sender, EventArgs e)
         {

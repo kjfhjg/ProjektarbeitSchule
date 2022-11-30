@@ -124,22 +124,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unknown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unknown2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\unknown3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\shop.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\KaffeeArten.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unknown4.png" />
+    <None Include="Resources\Milchkaffee_Standart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Latte_Standart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BohneDiamand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BohneGold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BohneSilber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BohneBronze.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

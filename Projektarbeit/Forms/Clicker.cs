@@ -8,74 +8,70 @@ namespace Projektarbeit
     {
         
         //Initialisieren und Deklarieren.
-        public static decimal m_HauptCount { get; set; } = (decimal)0.1;
-        public static double m_PunkteGesamt { get; set; } = 100000000;
-        
-        public Hauptmenü creator;
+        public static decimal m_hauptCount { get; set; } = (decimal)0.1;
+        public static double m_punkteGesamt { get; set; } = 100000000;  
+        public Hauptmenü m_creator;
 
-        KlasseKaffeWelt m_AuswahlWelt;
-
+        KlasseKaffeWelt m_auswahlWelt;
+        ShopUndUpgrade m_kaufladen;
         decimal m_zwischenPunkte;
-        ShopUndUpgrade Kaufladen;
-
-        int timer = 0;
-        
-
-        public Clicker(KlasseKaffeWelt auswahl)
+        public Clicker(KlasseKaffeWelt p_auswahl)
         {
             InitializeComponent();
             AusgabePunkte();
-            Kaufladen = new ShopUndUpgrade(auswahl);
-            Kaufladen.m_refresh += AusgabePunkte;
-            m_AuswahlWelt = auswahl;
+            m_kaufladen = new ShopUndUpgrade(p_auswahl);
+            m_kaufladen.m_refresh += AusgabePunkte;
+            m_auswahlWelt = p_auswahl;
         }
+        #region Methoden
         //Rundet die Zahlen
         public void Runden()
         {
             if (m_zwischenPunkte >= 1)
             {
-                m_PunkteGesamt += (double)m_zwischenPunkte;
+                m_punkteGesamt += (double)m_zwischenPunkte;
                 m_zwischenPunkte = 0;
             }
         }
         //Gibt die Punkte aus
         public void AusgabePunkte()
         {
-            lbl_TalerGesamt.Text = $"{m_PunkteGesamt:0}";
-            lbl_TalerPerClick.Text = m_HauptCount.ToString();
+            lbl_TalerGesamt.Text = $"{m_punkteGesamt:0}";
+            lbl_TalerPerClick.Text = m_hauptCount.ToString();
         }
-        #region Click Funktionen
+        #endregion
+        #region Events
         //Beim Click auf den CLickbutton erhöhen sich die Punkte um den Clickwert.
         private void Hauptklicker_Click(object sender, EventArgs e)
         {
-            m_zwischenPunkte += m_HauptCount;
+            m_zwischenPunkte += m_hauptCount;
             Runden();
             AusgabePunkte();
         }
         //Öffnet den Kaufladen
         private void btn_Laden_Click(object sender, EventArgs e)
         {
-            Kaufladen.ShowDialog();
+            m_kaufladen.ShowDialog();
         }
         //Öffnet den Shop indem man I drückt
         private void Clicker_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.I)
             {
-                Kaufladen.ShowDialog();
+                m_kaufladen.ShowDialog();
             }
         }
-        #endregion
         //führt den Hauptclicker aus wenn der tickt
         private void tmr_autoclicker_Tick(object sender, EventArgs e)
         {
-           Hauptklicker_Click(sender, e);
+            Hauptklicker_Click(sender, e);
         }
         //Speichert das Programm beim schließen
         private void Clicker_FormClosed(object sender, FormClosedEventArgs e)
         {
-            m_AuswahlWelt.Save();
-            creator.Show();
+            m_auswahlWelt.Save();
+            m_creator.Show();
         }
+        #endregion
     }
 }

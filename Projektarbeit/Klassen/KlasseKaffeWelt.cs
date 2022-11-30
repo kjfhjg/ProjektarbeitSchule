@@ -23,33 +23,33 @@ namespace Projektarbeit
             public bool m_upgrade;
         }
         Verkaufsgut[] m_verkaufsgüter;
-        public Clicker m_Clicker;
+        public Clicker m_clicker;
 
-        public KlasseKaffeWelt(int auswahl)
+        public KlasseKaffeWelt(int p_auswahl)
         {
-            if (auswahl == 0)
+            if (p_auswahl == 0)
             {
                 NeuesSpiel(Properties.Resources.KaffeeArten);
             }
-            else if (auswahl == 1)
+            else if (p_auswahl == 1)
             {
 
             }
-            else if (auswahl == 2)
+            else if (p_auswahl == 2)
             {
 
             }
 
         }
-        public void NeuesSpiel(string resources)
+        public void NeuesSpiel(string p_resources)
         {
             //Initialisieren und Deklarieren.
-            string temp;
-            int zaehler = 0;
+            string tmp_temp;
+            int tmp_zaehler = 0;
             m_verkaufsgüter = new Verkaufsgut[4];
 
-            temp = resources;
-            string[] stringAufspalten = temp.Split('\n');
+            tmp_temp = p_resources;
+            string[] stringAufspalten = tmp_temp.Split('\n');
 
             // entferne alle umbruchzeichen aus jedem String.
             for (int i = 0; i < stringAufspalten.Length; i++)
@@ -58,11 +58,11 @@ namespace Projektarbeit
             //erstellt ein Struct mit den Verkaufsgütern die man im Shop kaufen kann.
             for (int i = 0; i < m_verkaufsgüter.Length; i++)
             {
-                m_verkaufsgüter[i].m_name = stringAufspalten[zaehler++];
+                m_verkaufsgüter[i].m_name = stringAufspalten[tmp_zaehler++];
                 m_verkaufsgüter[i].m_anzahl = 0;
                 m_verkaufsgüter[i].m_tassenGröße = 0;
-                m_verkaufsgüter[i].m_kosten = Convert.ToInt32(stringAufspalten[zaehler++]);
-                m_verkaufsgüter[i].m_count = Convert.ToDecimal(stringAufspalten[zaehler++]);
+                m_verkaufsgüter[i].m_kosten = Convert.ToInt32(stringAufspalten[tmp_zaehler++]);
+                m_verkaufsgüter[i].m_count = Convert.ToDecimal(stringAufspalten[tmp_zaehler++]);
                 m_verkaufsgüter[i].m_upgrade = false;
             }
         }
@@ -74,12 +74,12 @@ namespace Projektarbeit
             {
                 if (m_verkaufsgüter[i].m_name == BekommeControleName(p_sender))
                 {
-                    if (Clicker.m_PunkteGesamt >= m_verkaufsgüter[i].m_kosten)
+                    if (Clicker.m_punkteGesamt >= m_verkaufsgüter[i].m_kosten)
                     {
-                        Clicker.m_PunkteGesamt -= m_verkaufsgüter[i].m_kosten;
+                        Clicker.m_punkteGesamt -= m_verkaufsgüter[i].m_kosten;
                         m_verkaufsgüter[i].m_anzahl += 1;
                         m_verkaufsgüter[i].m_kosten = m_verkaufsgüter[i].m_kosten * 1.1;
-                        Clicker.m_HauptCount += m_verkaufsgüter[i].m_count;
+                        Clicker.m_hauptCount += m_verkaufsgüter[i].m_count;
 
                         //Bei jedem Kauf eines Verkaufsgut wird nachgefragt ob sich etwas an der Autoclickgeschwindigkeit verändert.
                         AnzahlUpgradeMeilensteine(m_verkaufsgüter[i].m_anzahl);
@@ -90,14 +90,14 @@ namespace Projektarbeit
             }
             return 0;
         }
-        public static string BekommeControleName(object sender)
+        public static string BekommeControleName(object p_sender)
         {
             try
             {
-                PictureBox Controle = (PictureBox)sender;
-                string ControleName = Controle.Name;
+                PictureBox tmp_Controle = (PictureBox)p_sender;
+                string tmp_ControleName = tmp_Controle.Name;
 
-                return ControleName;
+                return tmp_ControleName;
             }
             catch
             {
@@ -106,32 +106,32 @@ namespace Projektarbeit
         }
         //Die Methode bekommt die Position der Verkaufsgüter übergeben und sucht anhand dieser das Passende Objekt und dessen Anzahl.
         //Die Anzahl wird abgeglichen und es wird dann die Passende Bitmap zurückgegeben.
-        public Bitmap getAnzahlBeens(int position)
+        public Bitmap getAnzahlBeens(int p_position)
         {
-            if (m_verkaufsgüter[position].m_anzahl < 50)
+            if (m_verkaufsgüter[p_position].m_anzahl < 50)
             {
-                return Properties.Resources.unknown;
+                return Properties.Resources.BohneBronze;
             }
-            else if (m_verkaufsgüter[position].m_anzahl >= 50 && m_verkaufsgüter[position].m_anzahl < 150)
+            else if (m_verkaufsgüter[p_position].m_anzahl >= 50 && m_verkaufsgüter[p_position].m_anzahl < 150)
             {
-                return Properties.Resources.unknown2;
+                return Properties.Resources.BohneSilber;
             }
-            else if (m_verkaufsgüter[position].m_anzahl >= 150 && m_verkaufsgüter[position].m_anzahl < 300)
+            else if (m_verkaufsgüter[p_position].m_anzahl >= 150 && m_verkaufsgüter[p_position].m_anzahl < 300)
             {
-                return Properties.Resources.unknown3;
+                return Properties.Resources.BohneGold;
             }
-            else if (m_verkaufsgüter[position].m_anzahl >= 350)
+            else if (m_verkaufsgüter[p_position].m_anzahl >= 350)
             {
-                return Properties.Resources.unknown4;
+                return Properties.Resources.BohneDiamand;
             }
 
-            return Properties.Resources.unknown;
+            return Properties.Resources.BohneBronze;
         }
         //Die Methode bekommt die Position der Verkaufsgüter übergeben und sucht anhand dieser das Passende Objekt und dessen Kosten.
         //Die Kosten werden als integer zurückgegeben.
-        public double getBeensKosten(int position)
+        public double getBeensKosten(int p_position)
         {
-            return m_verkaufsgüter[position].m_kosten;
+            return m_verkaufsgüter[p_position].m_kosten;
         }
 
         public void Save()
@@ -153,24 +153,24 @@ namespace Projektarbeit
         //Beim ersten Meilenstein wird der Autoclicker angeschalten
         public void AnzahlUpgradeMeilensteine(int anzahlGüter)
         {
-            int[] Meilensteine = new int[4]{10, 25, 50, 100};
-            int tmr_Intervall = m_Clicker.tmr_autoclicker.Interval;
+            int[] tmp_Meilensteine = new int[4]{10, 25, 50, 100};
+            int tmr_Intervall = m_clicker.tmr_autoclicker.Interval;
             int tmp_upgrade = 250;
             
-                if (anzahlGüter == Meilensteine[0])
+                if (anzahlGüter == tmp_Meilensteine[0])
                 {
                 tmr_Intervall -= tmp_upgrade;
-                m_Clicker.tmr_autoclicker.Start();
+                m_clicker.tmr_autoclicker.Start();
                 }
-                if (anzahlGüter == Meilensteine[1])
-                {
-                tmr_Intervall -= tmp_upgrade;
-                }
-                if (anzahlGüter == Meilensteine[2])
+                if (anzahlGüter == tmp_Meilensteine[1])
                 {
                 tmr_Intervall -= tmp_upgrade;
                 }
-                if (anzahlGüter == Meilensteine[3])
+                if (anzahlGüter == tmp_Meilensteine[2])
+                {
+                tmr_Intervall -= tmp_upgrade;
+                }
+                if (anzahlGüter == tmp_Meilensteine[3])
                 {
                 tmr_Intervall -= tmp_upgrade;
                 }              
