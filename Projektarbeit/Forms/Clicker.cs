@@ -43,7 +43,7 @@ namespace Projektarbeit
         #region Events
         //Beim Click auf den CLickbutton erhöhen sich die Punkte um den Clickwert.
         private void Hauptklicker_Click(object sender, EventArgs e)
-        {
+        {            
             m_zwischenPunkte += m_hauptCount;
             Runden();
             AusgabePunkte();
