@@ -52,10 +52,20 @@ namespace Projektarbeit
         //Versteckt Controls und Ruft das UserSteuerelement neues Spiel auf dieses wird angezeigt und füllt die gesamte Form aus
         private void btn_NeuesSpiel_Click(object sender, EventArgs e)
         {
-            versteckeHauptmenü();
-            uc_NeuesSpiel uc_neuesSpiel = new uc_NeuesSpiel(this);
-            uc_neuesSpiel.Dock = DockStyle.Fill;
-            this.Controls.Add(uc_neuesSpiel);
+            DialogResult tmp_dialogResult = MessageBox.Show("Neues Spiel erstellen?", "Neues Spiel" ,MessageBoxButtons.YesNo);
+
+            if (tmp_dialogResult == DialogResult.Yes)
+            {
+                KlasseKaffeWelt tmp_klasseKaffeWelt = new KlasseKaffeWelt(0);
+                Clicker tmp_clicker = new Clicker(tmp_klasseKaffeWelt);
+                this.Hide();
+                tmp_clicker.Show();
+                tmp_klasseKaffeWelt.m_clicker = tmp_clicker;
+            }
+            else
+            {
+
+            }
         }
         //Versteckt Controls und Ruft das UserSteuerelement Spiel laden auf dieses wird angezeigt und füllt die gesamte Form aus
         private void btn_SpielLaden_Click(object sender, EventArgs e)
