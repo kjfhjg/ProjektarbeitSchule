@@ -84,7 +84,7 @@
             this.Controls.Add(this.btn_SpielLaden);
             this.Controls.Add(this.btn_NeuesSpiel);
             this.Name = "Hauptmenü";
-            this.Text = "Hauptmenü";
+            this.Text = "KaffeeClicker";
             this.Load += new System.EventHandler(this.Hauptmenü_Load);
             this.ResumeLayout(false);
 

@@ -101,6 +101,26 @@ namespace Projektarbeit.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cappuchino_Standart {
+            get {
+                object obj = ResourceManager.GetObject("Cappuchino_Standart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Espresso_Standart {
+            get {
+                object obj = ResourceManager.GetObject("Espresso_Standart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Milchkaffe
         ///10
         ///0,1

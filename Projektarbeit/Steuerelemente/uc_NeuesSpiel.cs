@@ -14,9 +14,9 @@ namespace Projektarbeit
     {
         Hauptmenü m_hauptmenü;
         int m_auswahl;
-        public uc_NeuesSpiel(Hauptmenü hauptmenü)
+        public uc_NeuesSpiel(Hauptmenü p_hauptmenü)
         {
-            m_hauptmenü = hauptmenü;
+            m_hauptmenü = p_hauptmenü;
             InitializeComponent();
         }
 
@@ -33,12 +33,12 @@ namespace Projektarbeit
         }
         public void btn_Starten_Click(object sender, EventArgs e)
         {
-            KlasseKaffeWelt klasseKaffeWelt = new KlasseKaffeWelt(m_auswahl);
-            Clicker clicker = new Clicker(klasseKaffeWelt);
-            clicker.m_creator = m_hauptmenü;
-            klasseKaffeWelt.m_clicker = clicker;
+            KlasseKaffeWelt tmp_klasseKaffeWelt = new KlasseKaffeWelt(m_auswahl);
+            Clicker tmp_clicker = new Clicker(tmp_klasseKaffeWelt);
+            tmp_clicker.m_creator = m_hauptmenü;
+            tmp_klasseKaffeWelt.m_clicker = tmp_clicker;
             Parent.Hide();
-            clicker.Show();
+            tmp_clicker.Show();
         }
     }
 }

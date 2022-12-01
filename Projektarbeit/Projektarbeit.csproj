@@ -147,5 +147,15 @@
   <ItemGroup>
     <None Include="Resources\BohneBronze.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cappuchino_Standart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Espresso_Standart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
