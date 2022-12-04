@@ -123,6 +123,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_HauptClicker);
             this.Name = "Clicker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KaffeeClicker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Clicker_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Clicker_KeyDown);

@@ -68,18 +68,6 @@
     <Compile Include="Klassen\SoundPlayerKlasse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steuerelemente\uc_Einstellungen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Steuerelemente\uc_Einstellungen.Designer.cs">
-      <DependentUpon>uc_Einstellungen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Steuerelemente\uc_SpielLaden.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Steuerelemente\uc_SpielLaden.Designer.cs">
-      <DependentUpon>uc_SpielLaden.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\Clicker.resx">
       <DependentUpon>Clicker.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,9 +80,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Steuerelemente\uc_Einstellungen.resx">
-      <DependentUpon>uc_Einstellungen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

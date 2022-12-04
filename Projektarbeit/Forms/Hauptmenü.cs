@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projektarbeit
@@ -29,18 +21,9 @@ namespace Projektarbeit
             }
         }
 
-        private void versteckeHauptmenü()
-        {
-            foreach (Control item in this.Controls)
-            {
-                item.Visible = false;
-            }
-        }
-
         private void Hauptmenü_Load(object sender, EventArgs e)
         { 
-            if (!Directory.Exists("Save")) Directory.CreateDirectory("Save");
-            if (!File.Exists("Save\\KaffeWelt.txt")) File.Create("Save\\KaffeWelt.txt");
+            if (!File.Exists("KaffeWelt.txt")) File.Create("KaffeWelt.txt").Dispose();
         }
         #endregion
         #region Events
@@ -56,32 +39,42 @@ namespace Projektarbeit
 
             if (tmp_dialogResult == DialogResult.Yes)
             {
+                Clicker.m_hauptCount = (decimal)0.1;
+                Clicker.m_punkteGesamt = 100000000;  
+                if (File.Exists("Timer.txt")) File.Delete("Timer.txt");
                 KlasseKaffeWelt tmp_klasseKaffeWelt = new KlasseKaffeWelt(0);
                 Clicker tmp_clicker = new Clicker(tmp_klasseKaffeWelt);
+                tmp_clicker.m_creator = this;
                 this.Hide();
                 tmp_clicker.Show();
                 tmp_klasseKaffeWelt.m_clicker = tmp_clicker;
-            }
-            else
-            {
-
             }
         }
         //Versteckt Controls und Ruft das UserSteuerelement Spiel laden auf dieses wird angezeigt und füllt die gesamte Form aus
         private void btn_SpielLaden_Click(object sender, EventArgs e)
         {
-            versteckeHauptmenü();
-            uc_SpielLaden uc_spielLaden = new uc_SpielLaden();
-            uc_spielLaden.Dock = DockStyle.Fill;
-            this.Controls.Add(uc_spielLaden);
-        }
-        //Versteckt Controls und Ruft das UserSteuerelement Einstellungen auf dieses wird angezeigt und füllt die gesamte Form aus
-        private void btn_Einstellungen_Click(object sender, EventArgs e)
-        {
-            versteckeHauptmenü();
-            uc_Einstellungen uc_einstellungen = new uc_Einstellungen();
-            uc_einstellungen.Dock= DockStyle.Fill;
-            this.Controls.Add(uc_einstellungen);
+            if (File.ReadAllText("KaffeWelt.txt") == "")
+            {
+                MessageBox.Show("Es gibt keine vorhandenen Speicherdaten.");
+                return;
+            }
+
+            DialogResult tmp_dialogResult = MessageBox.Show("Spiel laden?", "Spiel laden", MessageBoxButtons.YesNo);
+
+            if (tmp_dialogResult == DialogResult.Yes)
+            {
+                KlasseKaffeWelt tmp_klasseKaffeWelt = new KlasseKaffeWelt(1);
+                Clicker tmp_clicker = new Clicker(tmp_klasseKaffeWelt);
+                tmp_clicker.m_creator = this;
+                this.Hide();
+                tmp_clicker.Show();
+                tmp_klasseKaffeWelt.m_clicker = tmp_clicker;
+                if (File.Exists("Timer.txt"))
+                {
+                    tmp_clicker.tmr_autoclicker.Interval = Convert.ToInt32(File.ReadAllText("Timer.txt"));
+                    tmp_clicker.tmr_autoclicker.Start();
+                }
+            }
         }
         #endregion
     }

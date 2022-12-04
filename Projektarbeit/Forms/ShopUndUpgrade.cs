@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projektarbeit
@@ -21,12 +13,7 @@ namespace Projektarbeit
             m_kaffewelt = p_kaffewelt;
             setBeensBitmap();
             setBeensKosten();
-        }
-        public void soundplayer()
-        {
-            SoundPlayer player = new SoundPlayer();
-            player.Stream = Properties.Resources.ResourceManager.GetStream("click");
-            player.Play();
+            setAmount();
         }
         #region Methoden
         public void Refresh()
@@ -52,11 +39,17 @@ namespace Projektarbeit
             lbl_LatteKosten.Text = $"{m_kaffewelt.getBeensKosten(2):0}";
             lbl_EspressoKosten.Text = $"{m_kaffewelt.getBeensKosten(3):0}";
         }
-        #endregion 
+        private void setAmount()
+        {
+            lbl_Milchkaffe.Text = $"{m_kaffewelt.getAmount("Milchkaffe")}";
+            lbl_Cappuccino.Text = $"{m_kaffewelt.getAmount("Cappuccino")}";
+            lbl_Latte.Text = $"{m_kaffewelt.getAmount("Latte")}";
+            lbl_Espresso.Text = $"{m_kaffewelt.getAmount("Espresso")}";
+        }
+        #endregion
         #region Events
         private void Click(object sender, EventArgs e)
         {
-            soundplayer();
             int tmp_anzahl;
             string tmp_name;
 
