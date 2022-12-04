@@ -72,7 +72,9 @@
             // 
             // btn_HauptClicker
             // 
-            this.btn_HauptClicker.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_HauptClicker.BackColor = System.Drawing.Color.Transparent;
+            this.btn_HauptClicker.BackgroundImage = global::Projektarbeit.Properties.Resources.KaffeeKanne;
+            this.btn_HauptClicker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_HauptClicker.Location = new System.Drawing.Point(48, 174);
             this.btn_HauptClicker.Name = "btn_HauptClicker";
             this.btn_HauptClicker.Size = new System.Drawing.Size(189, 162);

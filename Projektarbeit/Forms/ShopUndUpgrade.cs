@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,12 @@ namespace Projektarbeit
             m_kaffewelt = p_kaffewelt;
             setBeensBitmap();
             setBeensKosten();
+        }
+        public void soundplayer()
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.Stream = Properties.Resources.ResourceManager.GetStream("click");
+            player.Play();
         }
         #region Methoden
         public void Refresh()
@@ -49,6 +56,7 @@ namespace Projektarbeit
         #region Events
         private void Click(object sender, EventArgs e)
         {
+            soundplayer();
             int tmp_anzahl;
             string tmp_name;
 

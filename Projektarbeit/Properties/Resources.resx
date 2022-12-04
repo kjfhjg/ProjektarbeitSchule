@@ -133,11 +133,17 @@
   <data name="Cappuchino_Standart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cappuchino_Standart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Espresso_Standart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Espresso_Standart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KaffeeArten" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KaffeeArten.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="KaffeeKanne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KaffeeKanne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Latte_Standart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Latte_Standart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
