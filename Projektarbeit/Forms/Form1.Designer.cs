@@ -32,12 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Laden = new System.Windows.Forms.PictureBox();
-            this.btn_HauptClicker = new System.Windows.Forms.PictureBox();
             this.lbl_TalerGesamt = new System.Windows.Forms.TextBox();
             this.lbl_TalerPerClick = new System.Windows.Forms.TextBox();
             this.tmr_autoclicker = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,18 +69,6 @@
             this.btn_Laden.TabStop = false;
             this.btn_Laden.Click += new System.EventHandler(this.btn_Laden_Click);
             // 
-            // btn_HauptClicker
-            // 
-            this.btn_HauptClicker.BackColor = System.Drawing.Color.Transparent;
-            this.btn_HauptClicker.BackgroundImage = global::Projektarbeit.Properties.Resources.KaffeeKanne;
-            this.btn_HauptClicker.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_HauptClicker.Location = new System.Drawing.Point(48, 174);
-            this.btn_HauptClicker.Name = "btn_HauptClicker";
-            this.btn_HauptClicker.Size = new System.Drawing.Size(189, 162);
-            this.btn_HauptClicker.TabIndex = 0;
-            this.btn_HauptClicker.TabStop = false;
-            this.btn_HauptClicker.Click += new System.EventHandler(this.Hauptklicker_Click);
-            // 
             // lbl_TalerGesamt
             // 
             this.lbl_TalerGesamt.BackColor = System.Drawing.SystemColors.Control;
@@ -111,38 +98,50 @@
             this.tmr_autoclicker.Interval = 6000;
             this.tmr_autoclicker.Tick += new System.EventHandler(this.tmr_autoclicker_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Projektarbeit.Properties.Resources.KaffeeKanne;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(46, 165);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(189, 162);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Hauptklicker_Click);
+            // 
             // Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 391);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_TalerPerClick);
             this.Controls.Add(this.lbl_TalerGesamt);
             this.Controls.Add(this.btn_Laden);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_HauptClicker);
             this.Name = "Clicker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KaffeeClicker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Clicker_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Clicker_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Laden)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_HauptClicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox btn_HauptClicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btn_Laden;
         private System.Windows.Forms.TextBox lbl_TalerGesamt;
         private System.Windows.Forms.TextBox lbl_TalerPerClick;
         public System.Windows.Forms.Timer tmr_autoclicker;
+        private System.Windows.Forms.Button button1;
     }
 }
 
