@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Projektarbeit
@@ -14,6 +15,12 @@ namespace Projektarbeit
             setBeensBitmap();
             setBeensKosten();
             setAmount();
+        }
+        public void soundplayer()
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.Stream = Properties.Resources.ResourceManager.GetStream("click");
+            player.Play();
         }
         #region Methoden
         public void Refresh()
@@ -50,6 +57,7 @@ namespace Projektarbeit
         #region Events
         private void Click(object sender, EventArgs e)
         {
+            soundplayer();
             int tmp_anzahl;
             string tmp_name;
 
